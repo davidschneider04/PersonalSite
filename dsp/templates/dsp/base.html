@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+
+
+{% load staticfiles %}
+
+<html lang="en">
+  <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+  <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130480217-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-130480217-1');
+    </script>
+    {% block title %}
+      <div id="title">
+        <title>DavidSchneiderProjects</title>
+      </div>
+    {% endblock %}
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      {% block sidebar %}
+        <nav id="sidebar">
+          <div class="sidebar-header">
+            <img src="{% static 'img/me.png' %}" border="0" alt=DavidSchneiderProjects >
+          </div>
+          <ul class="list-unstyled components" style="list-style-type:none">
+              <li><a href="/home/">Home</a></li>
+              <li><a href="/tv/">SayWhen</a></li>
+              <li><a href="/movie/">Data Exploration in Python</a></li>
+              <li><a href="/movie/">Miscellaneous</a></li>
+              <li><a href="/help/">Contact/Hire</a></li>
+          </ul>
+        </nav>
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+    </div>    
+  </body>
+
+  {% block footer %}
+    <p>
+      "Sup."
+    </p>
+  {% endblock %}
+
+</html>

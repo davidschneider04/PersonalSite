@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% extends './base.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+ 
+<html lang="en">
+  <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body> 
+    {% block content %}
+    <div class="container">
+    	<div class="header">
+    		<h1>What's up, this site sucks</h1>
+    	</div>
+    </div>
+    {% endblock %}
+  </body>
+
+
+</html>
+
