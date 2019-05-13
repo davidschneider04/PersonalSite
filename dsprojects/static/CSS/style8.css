@@ -34,7 +34,7 @@ h1 {
   white-space: nowrap;
   font-weight: bold;
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   h1 {
     font-size: 65px;
     width: 80vw;

@@ -57,7 +57,7 @@ th, td {
 }
 
 h1 {
-    color: $setgrey;
+    color: $green;
     background-color: inherit;
     vertical-align: bottom;
     height: 20vh;
@@ -66,7 +66,7 @@ h1 {
     display:table-cell;
     white-space: nowrap;
     font-weight:bold;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         font-size: 65px;
         width:80vw;
     }
