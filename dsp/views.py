@@ -5,3 +5,19 @@ from django.http import HttpResponse, HttpResponseRedirect
 def home(request):
 	context={}
 	return render(request, 'dsp/home.html', context)
+
+def davesdatadepot(request):
+	context={}
+	return render(request, 'dsp/davesdatadepot.html', context)
+
+def pyython(request):
+	context={}
+	return render(request, 'dsp/pyython.html', context)
+
+def etc(request):
+	context={}
+	return render(request, 'dsp/etc.html', context)
+
+def contact(request):
+	context={}
+	return render(request, 'dsp/home.html', context)
