@@ -167,8 +167,8 @@ ul ul a {
 
 button.btn.btn_bottombar {
     width: 100%;
-    background-color: $green;
-    color: $white;
+    background-color: $forestgreen;
+    color: $setgrey;
     padding: 0;
     height: 100%;
 }
@@ -242,6 +242,7 @@ button.btn.btn_bottombar {
 #sidebar ul p {
     color: $setgrey;
     padding: 10px;
+    font-weight: bold;
 }
 
 #sidebar ul li a {
