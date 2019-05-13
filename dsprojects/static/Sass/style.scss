@@ -29,6 +29,7 @@ $banner_height:15vh;
 $side_padding:3vw;
 $fullwidth:100vw;
 $fullheight:100vh;
+$sidebarwidth:20vw;
 /*colors*/
 $forestgreen:#012800;
 $green:#024e00;
@@ -71,17 +72,16 @@ $lightgray:#CFCFCF;
         white-space: nowrap;
         grid-area: 1 / 1 / 1 / span 5;
         width: $fullwidth;
-        height:$banner_height+5vh;
+        height:$banner_height + 5vh;
         font-size: 6.5vw;
         font-weight:bold;
         color: $lightgray;
         background-color:$forestgreen;
         @include media-breakpoint-up(sm) {
-            width:80vw;
+            width:$fullwidth - $sidebarwidth;
         }
         @include media-breakpoint-up(lg) {
             font-size: 65px;
-            width:80vw;
         }
     }
 }
@@ -104,8 +104,8 @@ $lightgray:#CFCFCF;
         background: $forestgreen;
         color: $white;
         transition: all 0.3s;
-        min-width: 20vw;
-        max-width: 20vw;
+        min-width: $sidebarwidth;
+        max-width: $sidebarwidth;
         min-height: 50vh;
         flex-direction: column;
         position: relative;
