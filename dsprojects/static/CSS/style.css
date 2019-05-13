@@ -45,14 +45,19 @@ th, td {
 }
 
 h1 {
-  color: #FAFAFA;
+  color: #CFCFCF;
   background-color: inherit;
   vertical-align: bottom;
-  height: 15vh;
+  height: 20vh;
   font-size: 6.5vw;
   display: table-cell;
   white-space: nowrap;
   font-weight: bold;
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 65px;
+  }
 }
 
 h2 {

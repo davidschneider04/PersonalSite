@@ -80,14 +80,17 @@ th, td {
 }
 
 h1 {
-    color: $gray;
+    color: $lightgray;
     background-color: inherit;
     vertical-align: bottom;
-    height: 15vh;
+    height: 20vh;
     font-size: 6.5vw;
     display:table-cell;
     white-space: nowrap;
     font-weight:bold;
+    @include media-breakpoint-up(lg) {
+        font-size: 65px;
+    }
 }
 
 
