@@ -25,6 +25,9 @@
 $banner_height:15vh;
 $side_padding:3vw;
 /*colors*/
+$forestgreen:#012800;
+$green:#024e00;
+$white:#fff;
 $gray:#FAFAFA;
 $gray2:#999;
 $lightgray:#CFCFCF;
@@ -99,7 +102,7 @@ a, a:hover, a:focus {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: $darkerblue;
+    background: $green;
 }
 
 /*CLASSES*/
@@ -129,7 +132,7 @@ ul ul a {
 }
 
 .header {
-    background-color:$darkerblue;
+    background-color:$forestgreen;
     grid-area: 1 / 1 / 1 / span 5;
     text-indent:5vw;
     height:$banner_height;
@@ -138,7 +141,7 @@ ul ul a {
 }
 
 .headerlist {
-  background-color: $darkerblue;
+  background-color: $forestgreen;
   text-indent: 5vw;
   height: 15vh;
   align-self: end;
@@ -146,7 +149,7 @@ ul ul a {
 
 /*Bottom Sidebar*/
 .bottombar {
-    background: $lighterblue;
+    background: $forestgreen;
     color: white;
     transition: all 0.3s;
     display: flex;
@@ -180,7 +183,7 @@ button.btn.btn_bottombar {
 }
 .bottombarcol a:hover {
     color: white;
-    background: $darkestblue;
+    background: $forestgreen;
 }
 .bottombarcol a {
     text-align: center;
@@ -201,7 +204,7 @@ button.btn.btn_bottombar {
     display:none;
     @include media-breakpoint-up(lg) {
         display: flex;
-        background: $lighterblue;
+        background: $forestgreen;
         color: #fff;
         transition: all 0.3s;
         min-width: 20vw;
@@ -218,7 +221,7 @@ button.btn.btn_bottombar {
 }
 
 #sidebar .sidebar-header {
-    background: $darkerblue;
+    background: $green;
     text-indent: 1vw;
     min-height: $banner_height;
     font-size:2.5vw
@@ -232,7 +235,7 @@ button.btn.btn_bottombar {
 }
 
 #sidebar ul p {
-    color: #fff;
+    color: $white;
     padding: 10px;
 }
 
@@ -243,13 +246,13 @@ button.btn.btn_bottombar {
 }
 
 #sidebar ul li a:hover {
-    color: #fff;
-    background: $darkestblue;
+    color: $white;
+    background: $forestgreen;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: $darkerblue;
+    color: $white;
+    background: $green;
 }
 
 #footer {

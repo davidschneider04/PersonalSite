@@ -69,7 +69,7 @@ a, a:hover, a:focus {
 ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
-  background: #6D7FCC;
+  background: #024e00;
 }
 
 /*CLASSES*/
@@ -99,7 +99,7 @@ ul ul a {
 }
 
 .header {
-  background-color: #6D7FCC;
+  background-color: #012800;
   grid-area: 1/1/1/span 5;
   text-indent: 5vw;
   height: 15vh;
@@ -108,7 +108,7 @@ ul ul a {
 }
 
 .headerlist {
-  background-color: #6D7FCC;
+  background-color: #012800;
   text-indent: 5vw;
   height: 15vh;
   align-self: end;
@@ -116,7 +116,7 @@ ul ul a {
 
 /*Bottom Sidebar*/
 .bottombar {
-  background: #7386D5;
+  background: #012800;
   color: white;
   transition: all 0.3s;
   display: flex;
@@ -155,7 +155,7 @@ button.btn.btn_bottombar {
 
 .bottombarcol a:hover {
   color: white;
-  background: #2E3655;
+  background: #012800;
 }
 
 .bottombarcol a {
@@ -179,7 +179,7 @@ button.btn.btn_bottombar {
 @media (min-width: 992px) {
   #sidebar {
     display: flex;
-    background: #7386D5;
+    background: #012800;
     color: #fff;
     transition: all 0.3s;
     min-width: 20vw;
@@ -196,7 +196,7 @@ button.btn.btn_bottombar {
 }
 
 #sidebar .sidebar-header {
-  background: #6D7FCC;
+  background: #024e00;
   text-indent: 1vw;
   min-height: 15vh;
   font-size: 2.5vw;
@@ -222,12 +222,12 @@ button.btn.btn_bottombar {
 
 #sidebar ul li a:hover {
   color: #fff;
-  background: #2E3655;
+  background: #012800;
 }
 
 #sidebar ul li.active > a, a[aria-expanded=true] {
   color: #fff;
-  background: #6D7FCC;
+  background: #024e00;
 }
 
 #footer {
