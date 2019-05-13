@@ -188,6 +188,14 @@ button.btn.btn_bottombar {
 }
 
 /*SIDEBAR*/
+.sidebarimage {
+    width: 100%;
+    height: auto;
+    max-width: 50vw;
+    position: relative;
+    float: left;
+}
+
 #sidebar {
     display:none;
     @include media-breakpoint-up(lg) {
