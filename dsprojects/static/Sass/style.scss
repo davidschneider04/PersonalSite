@@ -127,6 +127,9 @@ ul ul a {
     align-items: stretch;
     background-color:$lightgray;
     min-width:100vw;
+    @include media-breakpoint-up(lg) {
+        width:80vw;
+    }
 }
 
 .header {
