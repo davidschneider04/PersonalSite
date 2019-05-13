@@ -9,7 +9,7 @@
 {% load staticfiles %}
 
 <html lang="en">
-  <link rel="stylesheet" href="{% static 'CSS/style10.css' %}" />
+  <link rel="stylesheet" href="{% static 'CSS/style11.css' %}" />
   <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
 
   <head>
@@ -47,6 +47,21 @@
           </ul>
         </nav>
       {% endblock %}
+        <nav class="bottombar">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm bottombarcol">
+                  <button type="button" class="btn btn_bottombar"><a href="/accomplishments/">Accomplishments</a></button>
+                </div>
+                <div class="col-sm bottombarcol">
+                  <button type="button" class="btn btn_bottombar"><a href="/davesdatadepot/">Data Exploration</a></button>
+                </div>
+                <div class="col-sm bottombarcol">
+                  <button type="button" class="btn btn_bottombar"><a href="/contact/">Contact/Hire</a></button>
+                </div>
+              </div>
+            </div>
+          </nav>
       {% block content %}
       {% endblock %}
     </div>    
