@@ -64,6 +64,7 @@ $lightgray:#CFCFCF;
 
 .header {
     width: $fullwidth;
+    grid-area: 1 / 1 / 1 / span 5;
     @include media-breakpoint-up(sm) {
             width:$fullwidth - $sidebarwidth;
         }
