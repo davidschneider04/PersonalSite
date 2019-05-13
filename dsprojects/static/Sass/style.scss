@@ -62,19 +62,21 @@ $lightgray:#CFCFCF;
 }
 
 .header {
-    display:table-cell;
-    vertical-align: bottom;
-    align-self:end;
-    padding-bottom:1vw;
-    text-indent:5vw;
-    white-space: nowrap;
-    grid-area: 1 / 1 / 1 / span 5;
-    width: $fullwidth;
-    height:$banner_height+5vh;
-    font-size: 6.5vw;
-    font-weight:bold;
-    color: $lightgray;
-    background-color:$forestgreen;
+    h1 {
+        display:table-cell;
+        vertical-align: bottom;
+        align-self:end;
+        padding-bottom:1vw;
+        text-indent:5vw;
+        white-space: nowrap;
+        grid-area: 1 / 1 / 1 / span 5;
+        width: $fullwidth;
+        height:$banner_height+5vh;
+        font-size: 6.5vw;
+        font-weight:bold;
+        color: $lightgray;
+        background-color:$forestgreen;
+    }
     @include media-breakpoint-up(sm) {
         width:80vw;
     }
@@ -91,7 +93,7 @@ $lightgray:#CFCFCF;
         margin-left: -250px;
     }
     @include media-breakpoint-up(sm) {
-        & .sidebarimage {
+        &.sidebarimage {
             width: 100%;
             height: auto;
             max-width: 50vw;
