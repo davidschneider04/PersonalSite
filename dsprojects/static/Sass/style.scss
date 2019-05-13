@@ -162,6 +162,10 @@ $lightgray:#CFCFCF;
         text-align: center;
         line-height: $banner_height;
         width: 100%;
+        &:hover {
+            color:$white;
+            text-decoration: none;
+        }
     }
 }
 
@@ -170,10 +174,8 @@ button.btn.btn_bottombar {
     height: 100%;
     padding: 0;
     background-color: $forestgreen;
-    color: $lightgray;
     &:hover {
         background-color: $green;
-        color: $white;
     }
 }
 
