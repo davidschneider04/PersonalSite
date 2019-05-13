@@ -26,6 +26,7 @@ $banner_height:15vh;
 $side_padding:3vw;
 /*colors*/
 $gray:#FAFAFA;
+$gray2:#999;
 $lightgray:#CFCFCF;
 $lighterblue:#7386D5;
 $darkerblue:#6D7FCC;
@@ -43,7 +44,7 @@ table {
 }
 
 label {
-    color:#999;
+    color:$gray2;
     font-family: "Poppins", sans-serif;
     font-size: 1.1em;
     font-weight: 300;
@@ -55,11 +56,12 @@ th, td {
 }
 
 h1 {
-    color: $lightgray;
+    color: $gray;
     background-color: inherit;
     vertical-align: bottom;
     height: 20vh;
     font-size: 6.5vw;
+    width: 100vw;
     display:table-cell;
     white-space: nowrap;
     font-weight:bold;
@@ -83,7 +85,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: $gray2;
     margin-left:$side_padding;
 }
 

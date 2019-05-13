@@ -13,13 +13,13 @@
   <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
 
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130480217-1"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130480217-2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-130480217-1');
+      gtag('config', 'UA-130480217-2');
     </script>
     {% block title %}
       <div id="title">
@@ -37,7 +37,7 @@
             <img src="{% static 'img/me.png' %}" border="0" alt=DavidSchneiderProjects >
           </div>
           <ul class="list-unstyled components" style="list-style-type:none">
-              <li><a href="/home/">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="/tv/">SayWhen</a></li>
               <li><a href="/movie/">Data Exploration in Python</a></li>
               <li><a href="/movie/">Miscellaneous</a></li>
@@ -52,7 +52,7 @@
 
   {% block footer %}
     <p>
-      "Sup."
+      David Schneider
     </p>
   {% endblock %}
 
