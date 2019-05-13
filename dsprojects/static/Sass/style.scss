@@ -32,9 +32,6 @@ $gray:#FAFAFA;
 $setgrey:#afafaf;
 $gray2:#999;
 $lightgray:#CFCFCF;
-$lighterblue:#7386D5;
-$darkerblue:#6D7FCC;
-$darkestblue:#2E3655;
 
 /*TAGS*/
 * {
@@ -60,7 +57,7 @@ th, td {
 }
 
 h1 {
-    color: $gray;
+    color: $setgrey;
     background-color: inherit;
     vertical-align: bottom;
     height: 20vh;
@@ -151,7 +148,7 @@ ul ul a {
 /*Bottom Sidebar*/
 .bottombar {
     background: $forestgreen;
-    color: white;
+    color: $white;
     transition: all 0.3s;
     display: flex;
     flex-direction: column-reverse;
@@ -168,7 +165,7 @@ ul ul a {
 button.btn.btn_bottombar {
     width: 100%;
     background-color: $green;
-    color: white;
+    color: $white;
     padding: 0;
     height: 100%;
 }
@@ -176,7 +173,7 @@ button.btn.btn_bottombar {
 .bottombarcol {
     text-align:center;
     line-height: 15vh;
-    background:$forestgreen;
+    background: $forestgreen;
     padding:0;
     @include media-breakpoint-up(lg) {
         display:none;
@@ -236,7 +233,7 @@ button.btn.btn_bottombar {
 }
 
 #sidebar ul p {
-    color: $white;
+    color: $setgrey;
     padding: 10px;
 }
 
@@ -248,7 +245,7 @@ button.btn.btn_bottombar {
 
 #sidebar ul li a:hover {
     color: $white;
-    background: $forestgreen;
+    background: $green;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
@@ -257,7 +254,7 @@ button.btn.btn_bottombar {
 }
 
 #footer {
-    color:grey;
+    color: $setgrey;
     font-size:2vh;
 }
 
