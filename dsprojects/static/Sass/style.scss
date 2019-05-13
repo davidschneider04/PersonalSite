@@ -76,13 +76,13 @@ $lightgray:#CFCFCF;
         font-weight:bold;
         color: $lightgray;
         background-color:$forestgreen;
-    }
-    @include media-breakpoint-up(sm) {
-        width:80vw;
-    }
-    @include media-breakpoint-up(lg) {
-        font-size: 65px;
-        width:80vw;
+        @include media-breakpoint-up(sm) {
+            width:80vw;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 65px;
+            width:80vw;
+        }
     }
 }
 
