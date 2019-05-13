@@ -91,12 +91,6 @@ $lightgray:#CFCFCF;
         margin-left: -250px;
     }
     @include media-breakpoint-up(sm) {
-        & .sidebar-header {
-            background: $forestgreen;
-            text-indent: 1vw;
-            min-height: $banner_height;
-            font-size:2.5vw
-        }
         & .sidebarimage {
             width: 100%;
             height: auto;
