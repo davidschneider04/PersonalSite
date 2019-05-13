@@ -66,7 +66,7 @@ h1 {
     display:table-cell;
     white-space: nowrap;
     font-weight:bold;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         font-size: 65px;
         width:80vw;
     }
@@ -136,7 +136,7 @@ ul ul a {
     height:$banner_height;
     align-self:end;
     width:100vw;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         width:80vw;
     }
 }
@@ -160,7 +160,7 @@ ul ul a {
     max-height: 15vh;
     position: fixed;
     bottom: 0;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         display:none;
     }
 }
@@ -178,7 +178,7 @@ button.btn.btn_bottombar {
     line-height: 15vh;
     background: $forestgreen;
     padding:0;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         display:none;
     }
 }
@@ -203,10 +203,10 @@ button.btn.btn_bottombar {
 
 #sidebar {
     display:none;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         display: flex;
         background: $forestgreen;
-        color: #fff;
+        color: $white;
         transition: all 0.3s;
         min-width: 20vw;
         max-width: 20vw;
