@@ -6,6 +6,10 @@ def home(request):
 	context={}
 	return render(request, 'dsp/home.html', context)
 
+def accomplishments(request):
+	context={}
+	return render(request, 'dsp/accomplishments.html', context)
+
 def davesdatadepot(request):
 	context={}
 	return render(request, 'dsp/davesdatadepot.html', context)
