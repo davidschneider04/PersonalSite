@@ -29,6 +29,7 @@ $forestgreen:#012800;
 $green:#024e00;
 $white:#fff;
 $gray:#FAFAFA;
+$setgrey:#afafaf;
 $gray2:#999;
 $lightgray:#CFCFCF;
 $lighterblue:#7386D5;
@@ -166,7 +167,7 @@ ul ul a {
 
 button.btn.btn_bottombar {
     width: 100%;
-    background-color: #7386D5;
+    background-color: $green;
     color: white;
     padding: 0;
     height: 100%;
@@ -175,15 +176,15 @@ button.btn.btn_bottombar {
 .bottombarcol {
     text-align:center;
     line-height: 15vh;
-    background:$lighterblue;
+    background:$forestgreen;
     padding:0;
     @include media-breakpoint-up(lg) {
         display:none;
     }
 }
 .bottombarcol a:hover {
-    color: white;
-    background: $forestgreen;
+    color: $white;
+    background: $green;
 }
 .bottombarcol a {
     text-align: center;
@@ -221,7 +222,7 @@ button.btn.btn_bottombar {
 }
 
 #sidebar .sidebar-header {
-    background: $green;
+    background: $forestgreen;
     text-indent: 1vw;
     min-height: $banner_height;
     font-size:2.5vw
@@ -229,7 +230,7 @@ button.btn.btn_bottombar {
 
 #sidebar ul.components {
     padding: $side_padding 0;
-    border-bottom: 1px solid $lighterblue;
+    border-bottom: 1px solid $forestgreen;
     text-indent: .5vw;
     font-size: 1.5vw;
 }
