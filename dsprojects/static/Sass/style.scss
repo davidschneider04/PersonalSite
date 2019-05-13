@@ -57,7 +57,7 @@ th, td {
 }
 
 h1 {
-    color: $green;
+    color: $setgrey;
     background-color: inherit;
     vertical-align: bottom;
     height: 20vh;
@@ -215,6 +215,10 @@ button.btn.btn_bottombar {
         position: relative;
         z-index: 0;
     }
+    @include media-breakpoint-up(xl) {
+        min-width: 240px;
+        max-width: 240px;
+    }
 }    
 
 #sidebar.active {
@@ -241,6 +245,7 @@ button.btn.btn_bottombar {
 }
 
 #sidebar ul li a {
+    margin-left: 1vw;
     padding: 10px;
     font-size: 1.1em;
     display: block;
