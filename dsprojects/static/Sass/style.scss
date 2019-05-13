@@ -61,12 +61,15 @@ h1 {
     vertical-align: bottom;
     height: 20vh;
     font-size: 6.5vw;
-    width: 100vw;
+    width: 80vw;
     display:table-cell;
     white-space: nowrap;
     font-weight:bold;
     @include media-breakpoint-up(lg) {
         font-size: 65px;
+    }
+    @include media-breakpoint-down(lg) {
+        width: 100vw;
     }
 }
 
