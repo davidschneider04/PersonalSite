@@ -24,4 +24,4 @@ def etc(request):
 
 def contact(request):
 	context={}
-	return render(request, 'dsp/home.html', context)
+	return render(request, 'dsp/contact.html', context)
