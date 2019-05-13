@@ -27,11 +27,12 @@
 /*sizes*/
 $banner_height:15vh;
 $side_padding:3vw;
+$fullwidth:100vw;
+$fullheight:100vh;
 /*colors*/
 $forestgreen:#012800;
 $green:#024e00;
 $white:#fff;
-$gray:#FAFAFA;
 $lightgray:#CFCFCF;
 
 /*TAGS*/
@@ -41,32 +42,11 @@ $lightgray:#CFCFCF;
   box-sizing: border-box;
 }
 
-h1 {
-    color: $lightgray;
-    background-color: inherit;
-    padding-bottom:1vw;
-    vertical-align: bottom;
-    height: 20vh;
-    font-size: 6.5vw;
-    width: 100vw;
-    display:table-cell;
-    white-space: nowrap;
-    font-weight:bold;
-    @include media-breakpoint-up(lg) {
-        font-size: 65px;
-        width:80vw;
-    }
-}
-
-h3.sidebarlogo {
-    margin-top:5px;
-}
-
 /*CLASSES*/
 .container {
     display: grid;
-    height:100vh;
-    width:100vw;
+    height:$fullheight;
+    width:$fullwidth;
     grid-template: $banner_height 10vh 10vh 30vh 10vh 1fr / 10vw 15vw 15vw 1fr; 
     padding-right: 0;
     padding-left: 0;
@@ -78,67 +58,33 @@ h3.sidebarlogo {
     display: flex;
     align-items: stretch;
     background-color:$lightgray;
-    min-width:100vw;
+    min-width:$fullwidth;
 }
 
 .header {
-    background-color:$forestgreen;
-    grid-area: 1 / 1 / 1 / span 5;
-    text-indent:5vw;
-    height:$banner_height;
+    display:table-cell;
+    vertical-align: bottom;
     align-self:end;
-    width:100vw;
+    padding-bottom:1vw;
+    text-indent:5vw;
+    white-space: nowrap;
+    grid-area: 1 / 1 / 1 / span 5;
+    width: $fullwidth;
+    height:$banner_height+5vh;
+    font-size: 6.5vw;
+    font-weight:bold;
+    color: $lightgray;
+    background-color:$forestgreen;
     @include media-breakpoint-up(sm) {
+        width:80vw;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 65px;
         width:80vw;
     }
 }
 
-/*Bottom Sidebar*/
-.bottombar {
-    background: $forestgreen;
-    color: $white;
-    transition: all 0.3s;
-    display: flex;
-    flex-direction: column-reverse;
-    min-width: 100%;
-    max-height: $banner_height;
-    position: fixed;
-    bottom: 0;
-    @include media-breakpoint-up(sm) {
-        display:none;
-    }
-}
-
-button.btn.btn_bottombar {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    background-color: $forestgreen;
-    color: $lightgray;
-    &:hover {
-        background-color: $green;
-        color: $white;
-    }
-}
-
-.bottombarcol {
-    text-align:center;
-    line-height: $banner_height;
-    background: $forestgreen;
-    padding:0;
-    @include media-breakpoint-up(sm) {
-        display:none;
-    }
-}
-
-.bottombarcol a {
-    font-weight:bold;
-    text-align: center;
-    line-height: $banner_height;
-    width: 100%;
-}
-
-/*SIDEBAR*/
+/*Sidebar*/
 .sidebarimage {
     width: 100%;
     height: auto;
@@ -163,13 +109,29 @@ button.btn.btn_bottombar {
         flex-direction: column;
         position: relative;
         z-index: 0;
+        ul li a {
+            font-weight: bold;
+            color: $lightgray;
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+            &:hover {
+                color: $white;
+                background: $green;
+            }
+        }
+        ul.components {
+            padding: $side_padding 0;
+            border-bottom: 1px solid $forestgreen;
+            text-indent: .5vw;
+            font-size: 1.5vw;
+        }
     }
     @include media-breakpoint-up(xl) {
         min-width: 240px;
         max-width: 240px;
     }
-}    
-
+}
 
 #sidebar .sidebar-header {
     background: $forestgreen;
@@ -178,26 +140,52 @@ button.btn.btn_bottombar {
     font-size:2.5vw
 }
 
-#sidebar ul.components {
-    padding: $side_padding 0;
-    border-bottom: 1px solid $forestgreen;
-    text-indent: .5vw;
-    font-size: 1.5vw;
+/*Bottom Bar (narrow screens)*/
+.bottombar {
+    @include media-breakpoint-up(sm) {
+        display:none;
+    }
+    background: $forestgreen;
+    color: $white;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 100%;
+    max-height: $banner_height;
+    position: fixed;
+    bottom: 0;
 }
 
-#sidebar ul li a {
-    font-weight: bold;
+button.btn.btn_bottombar {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: $forestgreen;
     color: $lightgray;
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
     &:hover {
+        background-color: $green;
         color: $white;
-        background: $green;
     }
 }
 
-#footer {
+.bottombarcol {
+    @include media-breakpoint-up(sm) {
+        display:none;
+    }
+    text-align:center;
+    line-height: $banner_height;
+    background: $forestgreen;
+    padding:0;
+    a {
+        font-weight:bold;
+        text-align: center;
+        line-height: $banner_height;
+        width: 100%;
+    }
+}
+
+
+.footerclass {
     color: $lightgray;
     font-size:2vh;
 }
