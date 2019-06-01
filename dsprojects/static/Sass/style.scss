@@ -12,7 +12,10 @@
 
   @media screen and (min-width: $min-vw) {
     @each $property in $properties {
-      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+      #{$property}: calc(#{$min-value} 
+      + #{strip-unit($max-value - $min-value)} 
+      * (100vw - #{$min-vw}) 
+      / #{strip-unit($max-vw - $min-vw)});
     }
   }
 
@@ -86,8 +89,8 @@ $lightgray:#CFCFCF;
     width: $fullwidth;
     grid-area: 1 / 1 / 1 / span 5;
     @include media-breakpoint-up(sm) {
-            width:$fullwidth - $sidebarwidth;
-        }
+        width:$fullwidth - $sidebarwidth;
+    }
     h1 {
         display:table-cell;
         vertical-align: bottom;
@@ -102,7 +105,6 @@ $lightgray:#CFCFCF;
         font-weight:bold;
         color: $lightgray;
         background-color:$forestgreen;
-
         @include media-breakpoint-up(lg) {
             font-size: 65px;
         }
@@ -194,6 +196,7 @@ button.btn.btn_bottombar {
     padding:0;
     a {
         display: block;
+        text-decoration: none;
         color: $lightgray;
         text-align: center;
         line-height: $bottombar_height;
@@ -214,6 +217,7 @@ button.btn.btn_bottombar {
     background:$forestgreen;
     padding:0;
     a {
+        text-decoration: none;
         color: $lightgray;
         text-align: center;
         line-height: $bottombar_height;
