@@ -34,7 +34,7 @@
       {% block sidebar %}
         <nav class="sidebar">
           <div>
-            <img class="sidebarimage" src="{% static 'img/me.png' %}" border="0" alt=ImageOfDavid >
+            <img class="sidebarimage" src="{% static 'img/me.png' %}" border="0" alt=ImageOfDavid>
           </div>
           <ul class="list-unstyled components" style="list-style-type:none">
               <li><a href="/">Home</a></li>
@@ -50,14 +50,35 @@
         <nav class="bottombar">
             <div class="container-fluid">
               <div class="row">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/davesdatadepot/">Projects</a>
+                </button>
+              </div>
+              <div class="row">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/resume/">Resume</a>
+                </button>
+              </div>
+              <div class="row">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/contact/">Contact</a>
+                </button>
+              </div>
+              <div class="row">
                 <div class="col-sm bottombarcol">
-                  <button type="button" class="btn btn_bottombar"><a href="/davesdatadepot/">Projects</a></button>
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://github.com/davidschneider04">GitHub</a>
+                  </button>
                 </div>
                 <div class="col-sm bottombarcol">
-                  <button type="button" class="btn btn_bottombar"><a href="/accomplishments/">Resume</a></button>
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://www.linkedin.com/in/dts55/">LinkedIn</a>
+                  </button>
                 </div>
                 <div class="col-sm bottombarcol">
-                  <button type="button" class="btn btn_bottombar"><a href="/contact/">Contact/Hire</a></button>
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://www.kaggle.com/davidschneider04/">Kaggle</a>
+                  </button>
                 </div>
               </div>
             </div>
