@@ -50,10 +50,29 @@ $lightgray:#CFCFCF;
     height:$fullheight;
     width:$fullwidth;
     grid-template: $header_height 1fr/5vw 1fr; 
+    min-height:$fullheight;
     padding-right: 0;
     padding-left: 0;
     margin-right: auto;
     margin-left: 0;
+}
+
+.projects_container {
+    display: grid;
+    grid-template-columns: 10vw 15vw 15vw 30vw 1fr;
+    grid-template-rows: $banner_height 10vh auto;
+    height:auto;
+    min-height:$fullheight;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15vh;
+}
+
+.project_entry {
+    grid-column: 2 / span 2;
+    height: min-content;
 }
 
 .wrapper {
