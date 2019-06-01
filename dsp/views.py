@@ -6,9 +6,9 @@ def home(request):
 	context={}
 	return render(request, 'dsp/home.html', context)
 
-def accomplishments(request):
+def resume(request):
 	context={}
-	return render(request, 'dsp/accomplishments.html', context)
+	return render(request, 'dsp/resume.html', context)
 
 def davesdatadepot(request):
 	context={}
