@@ -20,11 +20,12 @@
     	<div class="header">
     		<h1>Mapping Colorado's Hiking Peaks.</h1>
     	</div>
-      <!--#include file="footer_text.html" -->
-
+      <script>
+        var content = document.querySelector('link[rel="import"]').import;
+        document.body.appendChild(content.cloneNode(true));
+      </script>  
     </div>
     {% endblock %}
   </body>
 
 </html>
-
