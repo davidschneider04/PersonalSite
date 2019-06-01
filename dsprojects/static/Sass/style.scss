@@ -193,6 +193,8 @@ button.btn.btn_bottombar {
     background:$forestgreen;
     padding:0;
     a {
+        display: block;
+        color: $lightgray;
         text-align: center;
         line-height: $bottombar_height;
         font-size: $bottombar_height/(10/4);
@@ -207,7 +209,7 @@ button.btn.btn_bottombar {
 }
 
 .bottombarcol {
-    text-align:center;
+    text-align: center;
     line-height: $bottombar_height;
     background:$forestgreen;
     padding:0;
@@ -215,6 +217,7 @@ button.btn.btn_bottombar {
         color: $lightgray;
         text-align: center;
         line-height: $bottombar_height;
+        font-size: $bottombar_height/(10/4);
         width: 100%;
         &:hover {
             background: $green;
