@@ -176,27 +176,34 @@ button.btn.btn_bottombar {
     color: white;
     padding: 0;
     height: 100%;
-}
-
-.bottombarrow {
-    text-align:center;
-    line-height: $bottombar_height;
-    background:$forestgreen;
-    padding:0;
-    @include media-breakpoint-up(lg) {
-        display:none;
+    &:hover {
+        background: $green;
     }
 }
 
-.bottombarrow a:hover {
-    color: $white;
-    background: $green;
+.row {
+    display: block;
+    margin-right: -15px;
+    margin-left: -15px;
 }
-.bottombarrow a {
+
+.bottombarrow {
     text-align: center;
     line-height: $bottombar_height;
-    font-size: $bottombar_height/(10/4);
-    width: 100%;
+    background:$forestgreen;
+    padding:0;
+    a {
+        text-align: center;
+        line-height: $bottombar_height;
+        font-size: $bottombar_height/(10/4);
+        width: 100%;
+        &:hover {
+            background: $green;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        display:none;
+    }
 }
 
 .bottombarcol {
@@ -204,18 +211,18 @@ button.btn.btn_bottombar {
     line-height: $bottombar_height;
     background:$forestgreen;
     padding:0;
+    a {
+        color: $lightgray;
+        text-align: center;
+        line-height: $bottombar_height;
+        width: 100%;
+        &:hover {
+            background: $green;
+        }
+    }
     @include media-breakpoint-up(lg) {
         display:none;
     }
-}
-.bottombarcol a:hover {
-    color: $white;
-    background: $green;
-}
-.bottombarcol a {
-    text-align: center;
-    line-height: $bottombar_height;
-    width: 100%;
 }
 
 .footerclass {
