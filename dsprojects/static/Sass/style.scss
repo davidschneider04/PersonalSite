@@ -39,9 +39,9 @@ $lightgray:#CFCFCF;
 
 /*TAGS*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /*CLASSES*/
@@ -61,7 +61,6 @@ $lightgray:#CFCFCF;
     display: grid;
     grid-template-columns: 10vw 15vw 15vw 30vw 1fr;
     grid-template-rows: $banner_height 10vh auto;
-    height:auto;
     min-height:$fullheight;
     padding-right: 0;
     padding-left: 0;
@@ -115,7 +114,7 @@ $lightgray:#CFCFCF;
     &.active {
         margin-left: -250px;
     }
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         & .sidebarimage {
             width: 100%;
             height: auto;
@@ -156,7 +155,7 @@ $lightgray:#CFCFCF;
 
 /*Bottom Bar (narrow screens)*/
 .bottombar {
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         display:none;
     }
     background: $forestgreen;
@@ -171,7 +170,7 @@ $lightgray:#CFCFCF;
 }
 
 .bottombarcol {
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         display:none;
     }
     text-align:center;
