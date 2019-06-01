@@ -12,4 +12,5 @@ urlpatterns = [
     path('python/', views.pyython, name='pyython'),
     path('etc/', views.etc, name='etc'),
     path('contact/', views.contact, name='contact'),
+    path('davesdatadepot/mapping_mountains/', views.mapping_mountains, name='mapping_mountains'),
 ]

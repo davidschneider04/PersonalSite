@@ -25,3 +25,8 @@ def etc(request):
 def contact(request):
 	context={}
 	return render(request, 'dsp/contact.html', context)
+
+#individual projects
+def mapping_mountains(request):
+	context={}
+	return render(request, 'dsp/Projects/mountainmapping.html', context)
