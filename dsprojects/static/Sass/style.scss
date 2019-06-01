@@ -27,6 +27,7 @@
 /*sizes*/
 $banner_height:15vh;
 $header_height:20vh;
+$bottombar_height:10vh;
 $side_padding:3vw;
 $fullwidth:100vw;
 $fullheight:100vh;
@@ -171,7 +172,7 @@ $lightgray:#CFCFCF;
 
 button.btn.btn_bottombar {
     width: 100%;
-    background-color: #7386D5;
+    background-color: $forestgreen;
     color: white;
     padding: 0;
     height: 100%;
@@ -179,7 +180,7 @@ button.btn.btn_bottombar {
 
 .bottombarrow {
     text-align:center;
-    line-height: 15vh;
+    line-height: $bottombar_height;
     background:$forestgreen;
     padding:0;
     @include media-breakpoint-up(lg) {
@@ -193,13 +194,14 @@ button.btn.btn_bottombar {
 }
 .bottombarrow a {
     text-align: center;
-    line-height: 15vh;
+    line-height: $bottombar_height;
+    font-size: $bottombar_height*(10/4);
     width: 100%;
 }
 
 .bottombarcol {
     text-align:center;
-    line-height: 15vh;
+    line-height: $bottombar_height;
     background:$forestgreen;
     padding:0;
     @include media-breakpoint-up(lg) {
@@ -212,7 +214,7 @@ button.btn.btn_bottombar {
 }
 .bottombarcol a {
     text-align: center;
-    line-height: 15vh;
+    line-height: $bottombar_height;
     width: 100%;
 }
 
