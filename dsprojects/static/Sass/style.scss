@@ -195,7 +195,7 @@ button.btn.btn_bottombar {
 .bottombarrow a {
     text-align: center;
     line-height: $bottombar_height;
-    font-size: $bottombar_height*(10/4);
+    font-size: $bottombar_height/(10/4);
     width: 100%;
 }
 
