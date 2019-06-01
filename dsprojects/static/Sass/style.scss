@@ -61,6 +61,12 @@ $lightgray:#CFCFCF;
     margin-left: 0;
 }
 
+.threecolcontainer {
+    display: grid;
+    height: $bottombar_height;
+    grid-template: $bottombar_height / repeat(3, 1fr); 
+}
+
 .projects_container {
     display: grid;
     grid-template-columns: 10vw 15vw 15vw 30vw 1fr;
@@ -211,7 +217,15 @@ button.btn.btn_bottombar {
     }
 }
 
+
+.threecolcontainer {
+    display: grid;
+    height: $bottombar_height;
+    grid-template: $bottombar_height / repeat(3, 1fr); 
+}
+
 .bottombarcol {
+    grid-column: span 1;
     text-align: center;
     line-height: $bottombar_height;
     background:$forestgreen;
