@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% extends '../base.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+ 
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body> 
+    {% block content %}
+    <div class="container">
+    	<div class="header">
+    		<h1>Exploring Denver.</h1>
+    	</div>
+      <p>Below is a Jupyter notebook I happened to create for a Coursera assignment. It's not meant to actually provide any real insights but rather show off the possibilities. However, if you have any ideas on interesting expansions I'd love to hear them and am also always open to collaboration.</p>
+      <p><a href="https://nbviewer.jupyter.org/github/davidschneider04/Coursera_Capstone/blob/master/CapstoneProjectTheBattleOfNeighborhoods.ipynb">Link to Notebook</a>
+    </div>
+    {% endblock %}
+  </body>
+
+</html>

@@ -30,3 +30,7 @@ def contact(request):
 def mapping_mountains(request):
 	context={}
 	return render(request, 'dsp/Projects/mountainmapping.html', context)
+
+def denver_zipcodes(request):
+	context={}
+	return render(request, 'dsp/Projects/denver_zipcodes.html', context)

@@ -217,6 +217,19 @@ button.btn.btn_bottombar {
     margin-left: -15px;
 }
 
+.collapsebuttonrow_bottombar{
+    line-height: 3.5vh;
+    background-color: $green;
+    padding:0;
+    @include media-breakpoint-up(lg) {
+        display:none;
+    }
+}
+
+.collapsebuttonrow_bottombar_btn {
+    width: 100%;
+}
+
 .bottombarrow {
     text-align: center;
     line-height: $bottombar_height;

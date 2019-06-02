@@ -9,7 +9,7 @@
 {% load staticfiles %}
 
 <html lang="en">
-  <link rel="stylesheet" href="https://davidschneiderprojects.s3.amazonaws.com/CSS/style72.css" />
+  <link rel="stylesheet" href="https://davidschneiderprojects.s3.amazonaws.com/CSS/style73.css" />
   <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
 
   <head>
@@ -32,7 +32,7 @@
     <div class="wrapper">
       <!-- Side/bottom bar depending on screen width-->
       {% block sidebar %}
-        <nav class="sidebar">
+        <nav class="sidebar" id="sideBar">
           <div>
             <img class="sidebarimage" src="{% static 'img/me.png' %}" border="0" alt=ImageOfDavid>
           </div>
@@ -47,8 +47,13 @@
           </ul>
         </nav>
       {% endblock %}
-        <nav class="bottombar">
+        <nav class="bottombar" id="bottomBar">
             <div class="container-fluid">
+              <div class="row collapsebuttonrow_bottombar">
+                <button type="button" class="btn collapsebuttonrow_bottombar_btn">
+                  <img src="http://dummyimage.com/32x32/ff0/000">
+                </button>
+              </div>
               <div class="row bottombarrow">
                 <button type="button" class="btn btn_bottombar">
                   <a href="/davesdatadepot/">Projects</a>
