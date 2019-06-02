@@ -70,7 +70,7 @@ $lightgray:#CFCFCF;
 
 .projects_container {
     display: grid;
-    grid-template-columns: $left_indent 70vw 1fr;
+    grid-template-columns: $left_indent 80vw 1fr;
     grid-template-rows: $header_height 15vh 15vh 15vh 1fr;
     min-height: $fullheight;
     padding-right: 0;
@@ -84,11 +84,18 @@ $lightgray:#CFCFCF;
     grid-column: 2 / span 1;
     height: min-content;
     margin-top: 2.5vh;
+    border-color: $forestgreen;
+    border-width: medium;
+    border-style: solid;
     h2 {
+        background-color: $forestgreen;
+        color: $lightgray;
         font-weight: bold;
+        padding-left: 2.5vw;
     }
     p {
-        margin-left: 2.5vw;
+        font-size: xx-large;
+        margin-left: 5vw;
     }
 }
 
@@ -214,7 +221,7 @@ button.btn.btn_bottombar {
         color: $lightgray;
         text-align: center;
         line-height: $bottombar_height;
-        font-size: $bottombar_height/(10/4);
+        font-size: 3.5vh;
         font-weight: bold;
         width: 100%;
         &:hover {
@@ -225,7 +232,6 @@ button.btn.btn_bottombar {
         display:none;
     }
 }
-
 
 .threecolcontainer {
     display: grid;
@@ -244,7 +250,7 @@ button.btn.btn_bottombar {
         color: $lightgray;
         text-align: center;
         line-height: $bottombar_height;
-        font-size: $bottombar_height/(10/4);
+        font-size: 3.5vh;
         font-weight: bold;
         width: 100%;
         &:hover {
