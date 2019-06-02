@@ -32,6 +32,7 @@ $banner_height:15vh;
 $header_height:20vh;
 $bottombar_height:10vh;
 $side_padding:3vw;
+$left_indent:10vw;
 $fullwidth:100vw;
 $fullheight:100vh;
 $sidebarwidth:20vw;
@@ -69,9 +70,9 @@ $lightgray:#CFCFCF;
 
 .projects_container {
     display: grid;
-    grid-template-columns: 10vw 15vw 15vw 30vw 1fr;
-    grid-template-rows: $banner_height 10vh auto;
-    min-height:$fullheight;
+    grid-template-columns: $left_indent 70vw 1fr;
+    grid-template-rows: $header_height 15vh 15vh 15vh 1fr;
+    min-height: $fullheight;
     padding-right: 0;
     padding-left: 0;
     margin-right: auto;
@@ -80,8 +81,15 @@ $lightgray:#CFCFCF;
 }
 
 .project_entry {
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 1;
     height: min-content;
+    margin-top: 2.5vh;
+    h2 {
+        font-weight: bold;
+    }
+    p {
+        margin-left: 2.5vw;
+    }
 }
 
 .wrapper {
@@ -108,7 +116,7 @@ $lightgray:#CFCFCF;
         width: $fullwidth;
         height:$header_height;
         font-size: 6.5vw;
-        font-weight:bold;
+        font-weight: bold;
         color: $lightgray;
         background-color:$forestgreen;
         @include media-breakpoint-up(lg) {
@@ -207,6 +215,7 @@ button.btn.btn_bottombar {
         text-align: center;
         line-height: $bottombar_height;
         font-size: $bottombar_height/(10/4);
+        font-weight: bold;
         width: 100%;
         &:hover {
             background: $green;
@@ -236,6 +245,7 @@ button.btn.btn_bottombar {
         text-align: center;
         line-height: $bottombar_height;
         font-size: $bottombar_height/(10/4);
+        font-weight: bold;
         width: 100%;
         &:hover {
             background: $green;
