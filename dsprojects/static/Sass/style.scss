@@ -228,14 +228,24 @@ button.btn.btn_bottombar {
 
 .collapsebuttonrow_bottombar_btn {
     width: 100%;
-    background: $green;
+    background: $forestgreen;
+    margin: -15px;
+    &:hover {
+    	background:$green;
+    }
 }
 
 .bottombarrow {
     text-align: center;
     line-height: $bottombar_height;
-    background:$forestgreen;
+    background: $forestgreen;
     padding:0;
+    border: $forestgreen;
+    border-width: 5px;
+    border-style: solid;
+    &:hover {
+           border: $green;
+        }
     a {
         display: block;
         text-decoration: none;
