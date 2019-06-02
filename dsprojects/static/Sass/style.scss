@@ -94,7 +94,7 @@ $lightgray:#CFCFCF;
 .header {
     width: $fullwidth;
     grid-area: 1 / 1 / 1 / span 5;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         width:$fullwidth - $sidebarwidth;
     }
     h1 {
