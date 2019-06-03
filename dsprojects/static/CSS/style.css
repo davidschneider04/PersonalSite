@@ -54,11 +54,18 @@
   background-color: #012800;
   color: #CFCFCF;
   font-weight: bold;
-  padding-left: 2.5vw;
+  text-indent: 2.5vw;
 }
 .project_entry h2 a {
   font-size: 3vw;
   color: #CFCFCF;
+  line-height: 5vh;
+  display: block;
+}
+.project_entry h2 a:active {
+  background-color: #024e00;
+  color: #CFCFCF;
+  text-decoration: none;
 }
 .project_entry p {
   font-size: 3vw;

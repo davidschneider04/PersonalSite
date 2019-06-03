@@ -92,10 +92,17 @@ $lightgray:#CFCFCF;
         background-color: $forestgreen;
         color: $lightgray;
         font-weight: bold;
-        padding-left: 2.5vw;
+        text-indent: 2.5vw;
         a {
             font-size: 3vw;
             color: $lightgray;
+            line-height: 5vh;
+            display: block;
+            &:active {
+                background-color: $green;
+                color:$lightgray;
+                text-decoration: none;
+            }
         }
     }
     p {
