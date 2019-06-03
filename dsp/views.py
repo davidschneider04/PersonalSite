@@ -58,4 +58,4 @@ def davesdatadepot(request):
 	desc = "An exploratory project I did for a Coursera assignment. Using Python with Folium to plot restaurants, income, etc., zoned by ZCTA."
 	project = create_project(pname, purl , desc)
 	projects.append(project)
-    return render(request, 'dsp/davesdatadepot.html', {"context": projects})
+	return render(request, 'dsp/davesdatadepot.html', {"context": projects})
