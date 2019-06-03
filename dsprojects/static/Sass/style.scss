@@ -312,13 +312,16 @@ button.btn.btn_bottombar {
 }
 
 .resume_iframe {
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-left: 5vw;
 }
 
 .resumedownload {
-    position: absolute;
-    top: 2vh;
+    position: relative;
+    top: 1vh;
+    left: 10vw;
+    font-weight: 600;
+    font-size: 3vw;
 }
 
 #mapid {
