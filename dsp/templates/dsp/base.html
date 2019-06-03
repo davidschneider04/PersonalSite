@@ -9,7 +9,7 @@
 {% load staticfiles %}
 
 <html lang="en">
-  <link rel="stylesheet" href="https://davidschneiderprojects.s3.amazonaws.com/CSS/style80.css" />
+  <link rel="stylesheet" href="https://davidschneiderprojects.s3.amazonaws.com/CSS/style81.css" />
   <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
 
   <head>
@@ -52,7 +52,8 @@
             <div class="container-fluid">
               <div class="collapsebuttonrow_bottombar">
                 <button type="button" class="btn collapsebuttonrow_bottombar_btn" data-toggle="collapse" data-target=".row, .threecolcontainer, .bottombarcol">
-                  <img src="{% static 'img/chevron.svg' %}">
+                  <img class="chevrondown" src="{% static 'img/chevron.svg' %}">
+                  <img class="chevronup" src="{% static 'img/chevron_up.svg' %}">
                 </button>
               </div>
               <div class="row bottombarrow collapse show">

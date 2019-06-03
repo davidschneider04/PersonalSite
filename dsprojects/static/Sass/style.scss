@@ -241,6 +241,14 @@ button.btn.btn_bottombar {
     }
 }
 
+img[aria-expanded=false] .chevrondown {
+    display:none;
+}
+
+img[aria-expanded=true] .chevronup {
+    display:none;
+}
+
 .bottombarrow {
     text-align: center;
     line-height: $bottombar_height;
