@@ -241,16 +241,6 @@ button.btn.btn_bottombar {
     }
 }
 
-.collapse2 {
-    @extend .collapse;
-    &:not(.collapsed) {
-        display:none;
-    }
-    &:not(.show) {
-        display:block;
-    }   
-}
-
 .bottombarrow {
     text-align: center;
     line-height: $bottombar_height;
@@ -312,6 +302,12 @@ button.btn.btn_bottombar {
 .footerclass {
     color: $lightgray;
     font-size:2vh;
+}
+
+.homeicon {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
 }
 
 #mapid {
