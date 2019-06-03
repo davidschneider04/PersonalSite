@@ -286,6 +286,11 @@ button.btn.btn_bottombar:hover {
   height: 5vh;
 }
 
+.resume_iframe {
+  margin-top: 2vh;
+  margin-left: 5vw;
+}
+
 #mapid {
   height: 80vw;
   margin-top: 10vh;
