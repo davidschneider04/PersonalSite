@@ -241,12 +241,14 @@ button.btn.btn_bottombar {
     }
 }
 
-img[aria-expanded=false] .chevrondown {
-    display:none;
-}
-
-img[aria-expanded=true] .chevronup {
-    display:none;
+.collapse2 {
+    @extend .collapse;
+    &:not(.collapsed) {
+        display:none;
+    }
+    &:not(.show) {
+        display:block;
+    }   
 }
 
 .bottombarrow {
