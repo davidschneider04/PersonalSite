@@ -234,7 +234,10 @@ button.btn.btn_bottombar {
     margin-left: -15px;
     margin-right: -15px;
     &:hover {
-    	background:$green;
+    	background: $green;
+    }
+    &:not(:disabled):not(.disabled):active {
+        background: none;
     }
 }
 
