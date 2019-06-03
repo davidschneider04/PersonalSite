@@ -13,7 +13,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-  <body> 
+  <body>
+    {% block bottombar %}
+      <nav class="bottombar" id="bottomBar">
+            <div class="container-fluid">
+              <div class="collapsebuttonrow_bottombar">
+                <button type="button" class="btn collapsebuttonrow_bottombar_btn" data-toggle="collapse" data-target=".row, .threecolcontainer, .bottombarcol">
+                  <img src="{% static 'img/chevron.svg' %}">
+                </button>
+              </div>
+              <div class="row bottombarrow collapse show">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/davesdatadepot/">Shit</a>
+                </button>
+              </div>
+              <div class="row bottombarrow collapse show">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/resume/">Should</a>
+                </button>
+              </div>
+              <div class="row bottombarrow collapse show">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/contact/">Look / Different</a>
+                </button>
+              </div>
+              <div class="threecolcontainer collapse show">
+                <div class="bottombarcol collapse show">
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://github.com/davidschneider04" target="_blank">GitHub</a>
+                  </button>
+                </div>
+                <div class="bottombarcol collapse show">
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://www.linkedin.com/in/dts55/" target="_blank">LinkedIn</a>
+                  </button>
+                </div>
+                <div class="bottombarcol collapse show">
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://www.kaggle.com/davidschneider04/" target="_blank">Kaggle</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+    {% endblock %}
+
     {% block content %}
     <div class="projects_container">
     	<div class="header">
@@ -39,6 +83,7 @@
       </div>
     </div>
     {% endblock %}
+    
   </body>
 
 </html>
