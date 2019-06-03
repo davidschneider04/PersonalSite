@@ -9,7 +9,7 @@
 {% load staticfiles %}
 
 <html lang="en">
-  <link rel="stylesheet" href="https://davidschneiderprojects.s3.amazonaws.com/CSS/style83.css" />
+  <link rel="stylesheet" href="https://davidschneiderprojects.s3.amazonaws.com/CSS/style84.css" />
   <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
 
   <head>
@@ -32,7 +32,9 @@
     <div class="wrapper">
       {% block homeicon %}
       <div>
-        <img class="homeicon" src="{% static 'img/homeicon.svg' %}" alt=HomeIcon>
+        <a href="http://davidschneiderprojects.com">
+          <img class="homeicon" src="{% static 'img/homeicon.svg' %}" alt=HomeIcon>
+        </a>
       </div>
       {% endblock %}
 
