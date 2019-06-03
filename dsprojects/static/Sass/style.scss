@@ -338,7 +338,7 @@ button.btn.btn_bottombar {
     display: grid;
     height:$fullheight;
     width:$fullwidth;
-    grid-template: $header_height 7.5vh 5vh 5vh 1fr/5vw 1fr;
+    grid-template: $header_height 5vh 5vh 5vh 1fr/5vw 1fr;
     min-height:$fullheight;
     padding-right: 0;
     padding-left: 0;

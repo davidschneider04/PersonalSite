@@ -313,7 +313,7 @@ button.btn.btn_bottombar:hover {
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template: 20vh 7.5vh 5vh 5vh 1fr/5vw 1fr;
+  grid-template: 20vh 5vh 5vh 5vh 1fr/5vw 1fr;
   min-height: 100vh;
   padding-right: 0;
   padding-left: 0;
