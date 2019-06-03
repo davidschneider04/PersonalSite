@@ -58,4 +58,22 @@ def davesdatadepot(request):
 	desc = "An exploratory project I did for a Coursera assignment. Using Python with Folium to plot restaurants, income, etc., zoned by ZCTA."
 	project = create_project(pname, purl , desc)
 	projects.append(project)
+	#alteryx
+	pname = "Alteryx For Data Analysis"
+	purl = "http://davidschneiderprojects.com/davesdatadepot/alteryx_creations/"
+	desc = "Alteryx is a powerful, accessible tool that I am certified in and used at my past role to create a variety of custom tools and solutions."
+	project = create_project(pname, purl , desc)
+	projects.append(project)
+	#budget spreadsheet
+	pname = "Monthly Budget Template"
+	purl = "http://davidschneiderprojects.com/davesdatadepot/budget_template/"
+	desc = "Spreadsheet for tracking personal expenses. Goal is maximum customizability, which unfortunately requires some manual input. Most useful feature is trajectory graphing of spending by category and total."
+	project = create_project(pname, purl, desc)
+	projects.append(project)
+	#this site
+	pname = "Code For This Website"
+	purl = "https://github.com/davidschneider04/PersonalSite"
+	desc = "So meta. The internals of this site are mainly built with Django, Bootstrap, and Sass."
+	project = create_project(pname, purl, desc)
+	projects.append(project)
 	return render(request, 'dsp/davesdatadepot.html', {"context": projects})

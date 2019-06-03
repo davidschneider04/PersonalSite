@@ -71,7 +71,7 @@ $lightgray:#CFCFCF;
 .projects_container {
     display: grid;
     grid-template-columns: $left_indent 80vw 1fr;
-    grid-template-rows: $header_height 17.5vh 17.5vh 17.5vh 1fr;
+    grid-template-rows: $header_height auto;
     min-height: $fullheight;
     padding-right: 0;
     padding-left: 0;
@@ -94,7 +94,7 @@ $lightgray:#CFCFCF;
         font-weight: bold;
         text-indent: 2.5vw;
         a {
-            font-size: 3vw;
+            font-size: 2.5rem;
             color: $lightgray;
             line-height: 5vh;
             display: block;
@@ -109,7 +109,7 @@ $lightgray:#CFCFCF;
         }
     }
     p {
-        font-size: 3vw;
+        font-size: 2.5rem;
         margin-left: 5vw;
         margin-right: 5vw;
         text-align: justify;
