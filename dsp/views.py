@@ -47,7 +47,7 @@ def davesdatadepot(request):
 	project = create_project(pname, purl , desc)
 	projects.append(project)
 	#mapping mountains
-	pname = 
+	pname = "Mapping Colorado Mountains"
 	purl = "http://davidschneiderprojects.com/davesdatadepot/mapping_mountains/"
 	desc = "Using Python with Folium to create an interactive map of the 100 highest peaks in Colorado."
 	project = create_project(pname, purl , desc)
