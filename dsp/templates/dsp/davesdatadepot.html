@@ -60,12 +60,12 @@
     {% endblock %}
 
     {% block content %}
-      <div class="resultgrid">    
+      <div class="projects_container">    
       	<div class="header">
       		<h1>Data, insights, tinkering.</h1>
       	</div>
         {% for project in context %}
-          <div class="projectitem">
+          <div class="project_entry">
             <h2>
               <a href={{project.reflink}}>{{project.project}}</a>
             </h2>
