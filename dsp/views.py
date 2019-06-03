@@ -35,9 +35,18 @@ def denver_zipcodes(request):
 	context={}
 	return render(request, 'dsp/Projects/denver_zipcodes.html', context)
 
+def alteryx_creations(request):
+	context={}
+	return render(request, 'dsp/Projects/alteryx_creations.html', context)
+
+def budget_template(request):
+	context={}
+	return render(request, 'dsp/Projects/budget_template.html', context)
+
 def create_project(pname, purl, desc):
 	return {'project':pname, 'reflink':purl, 'description': desc}
 
+#all projects
 def davesdatadepot(request):
 	projects = []
 	#saywhen
