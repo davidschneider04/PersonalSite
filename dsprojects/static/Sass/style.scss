@@ -103,6 +103,9 @@ $lightgray:#CFCFCF;
                 color:$lightgray;
                 text-decoration: none;
             }
+            &:focus {
+                text-decoration: none;
+            }
         }
     }
     p {

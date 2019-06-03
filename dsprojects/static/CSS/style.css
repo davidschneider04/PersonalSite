@@ -67,6 +67,9 @@
   color: #CFCFCF;
   text-decoration: none;
 }
+.project_entry h2 a:focus {
+  text-decoration: none;
+}
 .project_entry p {
   font-size: 3vw;
   margin-left: 5vw;
