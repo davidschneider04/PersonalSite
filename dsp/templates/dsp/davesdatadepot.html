@@ -60,29 +60,19 @@
     {% endblock %}
 
     {% block content %}
-    <div class="projects_container">
-    	<div class="header">
-    		<h1>Data, insights, tinkering.</h1>
-    	</div>
-      <div class="project_entry">
-        <h2>
-          <a href="https://saywhen.app">SayWhen</a>
-        </h2>
-          <p>Do you have a favorite line from a favorite TV show or movie, but don't remember what episode or time it's from? Let SayWhen find the exact spot and link you to it!</p>
+      <div class="resultgrid">    
+      	<div class="header">
+      		<h1>Data, insights, tinkering.</h1>
+      	</div>
+        {% for project in context %}
+          <div class="projectitem">
+            <h2>
+              <a href={{project.reflink}}>{{project.project}}</a>
+            </h2>
+              <p>{{project.description}}</p>
+          </div>
+        {% endfor %}
       </div>
-      <div class="project_entry">
-        <h2>
-          <a href="/davesdatadepot/mapping_mountains/">Mapping Colorado Mountain Peaks</a>
-        </h2>
-          <p>Using Python and Folium to create an interactive map of the 100 highest peaks in Colorado.</p>
-      </div>
-      <div class="project_entry">
-        <h2>
-          <a href="/davesdatadepot/denver_zipcodes/">Mapping & Modeling Denver Zipcodes</a>
-        </h2>
-          <p>An exploratory project I did for a Coursera assignment. Using Python & Folium to plot restaurants, income, etc., zoned by ZCTA.</p>
-      </div>
-    </div>
     {% endblock %}
     
   </body>

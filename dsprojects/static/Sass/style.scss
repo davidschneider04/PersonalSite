@@ -364,6 +364,44 @@ button.btn.btn_bottombar {
     }
 }
 
+.resultgrid {
+    display: grid;
+    height:auto;
+    min-height:100vh;
+    width:100vw;
+    grid-template-rows: $header_height 10vh auto;
+    grid-template-columns: 10vw 15vw 15vw 30vw 1fr;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15vh;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 2vh;
+    }
+}
+
+.projectitem {
+    grid-column: 1/span 4;
+    display: grid;
+    grid-template-columns: 45vw 40vw;
+    grid-template-rows: 1fr 1fr;
+    height: max-content;
+    border: #444;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    margin-left: 2vw;
+    margin-right: 8vw;
+    margin-top: 1vw;
+    width: 85vw;
+    padding-bottom:1vh;
+    @include media-breakpoint-up(lg) {
+        width: 75vw;
+        grid-template-columns: 45vw 30vw;
+    }
+}
+
 #mapid {
     height: 80vw;
     margin-top: 10vh;
