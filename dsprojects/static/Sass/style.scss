@@ -478,16 +478,22 @@ li.install.disqus-footer__item {
 }
 
 .websitecodegrid {
-    grid-template-rows: 20vh 1fr 1fr 1fr 20vh;
-    grid-template-columns: 20vw 1fr;
+    grid-template: 20vh 30vh 1fr/20vw 20vw 20vw 1fr;
 }
 
 .websitecodeheader {
     grid-row: 1;
-    grid-columns: 1 / span 2;
+    grid-column: 1 / span 2;
 }
 
 .acknowledgement {
-    grid-row: auto;
-    grid-column: 1;
+    grid-row: 2;
+    grid-column: auto;
+}
+
+.acknowledgementlogo {
+    grid-row: 2;
+    grid-column: auto;
+    max-width: 20vw;
+    max-height: 30vh;
 }
