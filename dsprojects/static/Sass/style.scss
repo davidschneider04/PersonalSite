@@ -322,13 +322,14 @@ button.btn.btn_bottombar {
 }
 
 .resume_iframe {
-    margin-top: 4vh;
+    grid-column: 2 / span 3;
+    margin-top: 2vh;
     margin-left: 5vw;
 }
 
 .resumedownload {
     position: relative;
-    top: 1vh;
+    top: 2vh;
     left: 10vw;
     font-weight: 600;
     font-size: 3vw;
@@ -400,6 +401,18 @@ button.btn.btn_bottombar {
         width: 75vw;
         grid-template-columns: 45vw 30vw;
     }
+}
+
+.resumecontainer {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template: 15vh 3vh 1fr/5vw 30vw 1fr;
+    min-height: 100vh;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: 0;
 }
 
 #mapid {
