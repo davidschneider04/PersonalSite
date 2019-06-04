@@ -325,6 +325,20 @@ button.btn.btn_bottombar {
     grid-column: 2 / span 3;
     margin-top: 2vh;
     margin-left: 5vw;
+    @include media-breakpoint-down(md) {
+        display:none;
+    }
+}
+
+.resume_image {
+    grid-column: 2 / span 3;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    width:80vw; 
+    height:50vh;
+    @include media-breakpoint-up(md) {
+        display:none;
+    }
 }
 
 .resumedownload {
