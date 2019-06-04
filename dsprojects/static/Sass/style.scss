@@ -68,6 +68,14 @@ $lightgray:#CFCFCF;
     }
 }
 
+.container-fluid {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .threecolcontainer {
     display: grid;
     height: $bottombar_height;
@@ -228,6 +236,7 @@ button.btn.btn_bottombar {
     color: $lightgray;
     padding: 0;
     height: 100%;
+    border-radius:0;
     &:hover {
         background: $green;
     }
