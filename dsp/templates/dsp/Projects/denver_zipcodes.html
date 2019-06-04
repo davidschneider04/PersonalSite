@@ -14,6 +14,13 @@
   </head>
 
   <body> 
+    {% block backicon %}
+    <div>
+      <a href="http://davidschneiderprojects.com/davesdatadepot">
+        <img class="backicon" src="{% static 'img/backicon.svg' %}" alt=BackIcon>
+      </a>
+    </div>
+    {% endblock %}
     {% block content %}
     <div class="container">
     	<div class="header">
