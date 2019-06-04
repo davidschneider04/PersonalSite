@@ -55,6 +55,7 @@ $lightgray:#CFCFCF;
     display: grid;
     height:$fullheight;
     width:$fullwidth;
+    min-width:$fullwidth;
     grid-template-rows: $header_height 1fr $disqus_height;
     grid-template-columns: 5vw 1fr; 
     min-height:$fullheight;
@@ -427,6 +428,12 @@ button.btn.btn_bottombar {
     padding-left: 0;
     margin-right: auto;
     margin-left: 0;
+}
+
+div#disqus_thread {
+    grid-row: 3;
+    grid-column: 2 / span 1;
+    margin-right: 5vw;
 }
 
 #mapid {
