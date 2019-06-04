@@ -54,7 +54,7 @@ def create_project(pname, purl, desc):
 def davesdatadepot(request):
 	projects = []
 	#saywhen
-	pname = "SayWhen&mdash Movie/TV Scene Finder"
+	pname = "SayWhen— Movie/TV Scene Finder"
 	purl = "http://davidschneiderprojects.com/davesdatadepot/saywhen/"
 	desc = "Do you have a favorite line from a favorite TV show or movie, but don't remember what episode or time it's from? Let SayWhen find the exact spot and link you to it."
 	project = create_project(pname, purl , desc)
