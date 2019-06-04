@@ -476,3 +476,18 @@ li.install.disqus-footer__item {
     height: 80vw;
     margin-top: 10vh;
 }
+
+.websitecodegrid {
+    grid-template-rows: 20vh 1fr 1fr 1fr 20vh;
+    grid-template-columns: 20vw 1fr;
+}
+
+.websitecodeheader {
+    grid-row: 1;
+    grid-columns: 1 / span 2;
+}
+
+.acknowledgement {
+    grid-row: auto;
+    grid-column: 1;
+}
