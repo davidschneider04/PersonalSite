@@ -63,6 +63,9 @@ $lightgray:#CFCFCF;
     padding-left: 0;
     margin-right: 0;
     margin-left: 0;
+    @include media-breakpoint-up(lg) {
+        min-width: auto;
+    }
 }
 
 .threecolcontainer {
@@ -441,6 +444,18 @@ div#disqus_thread {
     grid-column: 2 / span 1;
     margin-right: 5vw;
     margin-top: auto;
+}
+
+li#thread-share-bar {
+    display: none;
+}
+
+li.install.disqus-footer__item {
+    display: none;
+}
+
+.publisher-anchor-color a {
+    color: $forestgreen !important;
 }
 
 #mapid {
