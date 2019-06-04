@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-  <body> 
+  <body>
+    {% block content %}
     {% block backicon %}
     <div>
       <a href="http://davidschneiderprojects.com/davesdatadepot">
@@ -21,7 +22,7 @@
       </a>
     </div>
     {% endblock %}
-    {% block content %}
+
     <div class="container">
     	<div class="header">
     		<h1>SayWhen— Find a Scene.</h1>
