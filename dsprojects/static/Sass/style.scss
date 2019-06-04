@@ -56,7 +56,7 @@ $lightgray:#CFCFCF;
     height:$fullheight;
     width:$fullwidth;
     min-width:$fullwidth;
-    grid-template-rows: $header_height 1fr $disqus_height;
+    grid-template-rows: $header_height 50vh 1fr;
     grid-template-columns: 5vw 1fr; 
     min-height:$fullheight;
     padding-right: 0;
