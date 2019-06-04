@@ -10,10 +10,6 @@ def resume(request):
 	context={}
 	return render(request, 'dsp/resume.html', context)
 
-#def davesdatadepot(request):
-#	context={}
-#	return render(request, 'dsp/davesdatadepot.html', {"context": context})
-
 def pyython(request):
 	context={}
 	return render(request, 'dsp/pyython.html', context)
@@ -38,6 +34,10 @@ def denver_zipcodes(request):
 def alteryx_creations(request):
 	context={}
 	return render(request, 'dsp/Projects/alteryx_creations.html', context)
+
+def saywhen(request):
+	context={}
+	return render(request, 'dsp/Projects/saywhen.html', context)
 
 def budget_template(request):
 	context={}
@@ -81,7 +81,7 @@ def davesdatadepot(request):
 	projects.append(project)
 	#this site
 	pname = "Code For This Website"
-	purl = "https://github.com/davidschneider04/PersonalSite"
+	purl = "http://davidschneiderprojects.com/davesdatadepot/website_code/"
 	desc = "So meta. The internals of this site are mainly built with Django, Bootstrap, and Sass."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
