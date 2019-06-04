@@ -31,6 +31,7 @@
 $banner_height:15vh;
 $header_height:15vh;
 $bottombar_height:10vh;
+$disqus_height:15vh;
 $side_padding:3vw;
 $left_indent:10vw;
 $fullwidth:100vw;
@@ -54,7 +55,8 @@ $lightgray:#CFCFCF;
     display: grid;
     height:$fullheight;
     width:$fullwidth;
-    grid-template: $header_height 1fr/5vw 1fr; 
+    grid-template-rows: $header_height 1fr $disqus_height;
+    grid-template-columns: 5vw 1fr; 
     min-height:$fullheight;
     padding-right: 0;
     padding-left: 0;
