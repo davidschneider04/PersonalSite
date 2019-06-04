@@ -489,7 +489,7 @@ li.install.disqus-footer__item {
     font-size: 10vw;
     font-weight: 800;
     grid-row: 1;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 3;
     a {
         color: $forestgreen;
         &:hover {
@@ -509,6 +509,7 @@ li.install.disqus-footer__item {
     display:grid;
     grid-row: 2;
     grid-column: auto;
+    margin-right:5vw;
     max-width: 20vw;
     max-height: 30vh;
 }
