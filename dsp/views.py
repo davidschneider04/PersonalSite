@@ -39,6 +39,10 @@ def saywhen(request):
 	context={}
 	return render(request, 'dsp/Projects/saywhen.html', context)
 
+def website_code(request):
+	context={}
+	return render(request, 'dsp/Projects/website_code.html', context)
+
 def budget_template(request):
 	context={}
 	return render(request, 'dsp/Projects/budget_template.html', context)
