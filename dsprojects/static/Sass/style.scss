@@ -478,20 +478,35 @@ li.install.disqus-footer__item {
 }
 
 .websitecodegrid {
+    display:grid;
     grid-template: 20vh 30vh 1fr/20vw 20vw 20vw 1fr;
 }
 
 .websitecodeheader {
+    max-width: 100vw;
+    margin-top: 5vh;
+    /* display: grid; */
+    font-size: 10vw;
+    font-weight: 800;
     grid-row: 1;
     grid-column: 1 / span 2;
+    a {
+        color: $forestgreen;
+        &:hover {
+            color: $green;
+            text-decoration: none;
+        }
+    }
 }
 
 .acknowledgement {
+    display:grid;
     grid-row: 2;
     grid-column: auto;
 }
 
 .acknowledgementlogo {
+    display:grid;
     grid-row: 2;
     grid-column: auto;
     max-width: 20vw;
