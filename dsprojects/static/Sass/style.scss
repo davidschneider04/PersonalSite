@@ -503,7 +503,8 @@ li.install.disqus-footer__item {
     display:grid;
     grid-row: auto;
     grid-column:2;
-    @include media-breakpoint-up(lg) {    
+    margin-top: 5vh;
+    @include media-breakpoint-up(md) {    
         grid-row: 2;
         grid-column: auto;;
     }
