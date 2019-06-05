@@ -25,7 +25,7 @@ def contact(request):
 #individual projects
 def mapping_mountains(request):
 	context={}
-	return render(request, 'dsp/Projects/map.html', context)
+	return render(request, 'dsp/Projects/mountainmapping.html', context)
 
 def denver_zipcodes(request):
 	context={}
