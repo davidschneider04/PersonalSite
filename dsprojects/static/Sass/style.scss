@@ -501,8 +501,12 @@ li.install.disqus-footer__item {
 
 .acknowledgement {
     display:grid;
-    grid-row: 2;
-    grid-column: auto;
+    grid-row: auto;
+    grid-column:2;
+    @include media-breakpoint-up(lg) {    
+        grid-row: 2;
+        grid-column: auto;;
+    }
 }
 
 .acknowledgementlogo {
