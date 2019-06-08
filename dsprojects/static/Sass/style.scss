@@ -131,6 +131,7 @@ $lightgray:#CFCFCF;
                 border-color: $green;
                 border-style: solid;
                 border-width: medium;
+                background: $green;
             }
         }
     }
@@ -363,8 +364,14 @@ img.backicon {
 
 .resume_iframe {
     grid-column: 2 / span 3;
-    margin-top: 2vh;
+    margin-top: 5vh;
     margin-left: 5vw;
+    grid-row: 3;
+    height: 70vh;
+    width: 80vw;
+    @include media-breakpoint-up(lg) {
+        width: 60vw;
+    }
 }
 
 .resumedownload {
@@ -447,7 +454,7 @@ img.backicon {
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template: 15vh 3vh 1fr/5vw 30vw 1fr;
+    grid-template: 15vh 5vh 70vh 1fr/5vw 30vw 1fr;
     min-height: 100vh;
     padding-right: 0;
     padding-left: 0;
@@ -475,6 +482,9 @@ img.backicon {
             text-decoration: none;
         }
     }
+    @media only screen and (min-width: 1000px) {
+            font-size: 70px;
+        }
 }
 
 .projectdescriptionlongform {
@@ -483,6 +493,9 @@ img.backicon {
     font-weight: 600;
     font-size: 3vw;
     margin-top: 5vh;
+    @include media-breakpoint-up(lg) {    
+        font-size: 30px;
+    }
 }
 
 .acknowledgement {
