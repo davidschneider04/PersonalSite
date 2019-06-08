@@ -24,4 +24,5 @@ urlpatterns = [
         views.website_code, name='website_code'),
     path('davesdatadepot/saywhen/',
         views.saywhen, name='saywhen'),
+    path('/resume/', views.resume, name='resume'),
 ]
