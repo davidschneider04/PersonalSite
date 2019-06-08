@@ -101,6 +101,9 @@ $lightgray:#CFCFCF;
     border-color: $forestgreen;
     border-width: medium;
     border-style: solid;
+    @include media-breakpoint-up(lg) {
+        width: 65vw;
+    }
     h2 {
         line-height: 5vh;
         background-color: $forestgreen;
@@ -351,18 +354,6 @@ img.backicon {
     grid-column: 2 / span 3;
     margin-top: 2vh;
     margin-left: 5vw;
-    
-}
-
-.resume_image {
-    grid-column: 2 / span 3;
-    margin-top: 2vh;
-    margin-left: 5vw;
-    width:80vw; 
-    height:50vh;
-    @include media-breakpoint-up(md) {
-        display:none;
-    }
 }
 
 .resumedownload {

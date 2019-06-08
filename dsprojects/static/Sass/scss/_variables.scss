@@ -192,7 +192,8 @@ $grid-breakpoints: map-merge(
     xs: 0,
     sm: 576px,
     md: 768px,
-    lg: 992px,
+    //default is 992
+    lg: 900px,
     xl: 1200px
   ),
   $grid-breakpoints
