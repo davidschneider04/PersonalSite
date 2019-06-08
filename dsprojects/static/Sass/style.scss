@@ -381,6 +381,9 @@ img.backicon {
     font-weight: 600;
     font-size: 3vw;
     display: flex;
+    @include media-breakpoint-up(lg) {
+        font-size: 30px;
+    }
 }
 
 .biocontainer {
