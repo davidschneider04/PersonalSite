@@ -6,7 +6,7 @@ app_name = 'dsp'
 
 urlpatterns = [
     path('', views.home, name='homeblank'),
-    path('/', views.home, name='homeslash')
+    path('/', views.home, name='homeslash'),
     path('home/', views.home, name='home'),
     path('resume/', views.resume, name='resume'),
     path('davesdatadepot/', views.davesdatadepot, name='davesdatadepot'),
