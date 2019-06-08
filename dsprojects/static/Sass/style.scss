@@ -26,6 +26,9 @@
   }
 }
 
+/* Override Bootstrap default breakpoints */
+
+
 /*CONSTANTS*/
 /*sizes*/
 $banner_height:15vh;
@@ -109,7 +112,7 @@ $lightgray:#CFCFCF;
         background-color: $forestgreen;
         color: $lightgray;
         font-weight: bold;
-        text-indent: 2.5vw;
+        padding-left: 2.5vw;
         a {
             border-color: $forestgreen;
             border-style: solid;
@@ -136,7 +139,15 @@ $lightgray:#CFCFCF;
         margin-left: 5vw;
         margin-right: 5vw;
         text-align: justify;
+        @include media-breakpoint-up(lg) {
+            font-size: 2rem;
+        }
     }
+}
+
+.saywhenlogo {
+    max-width: 100%;
+    height: auto;
 }
 
 .wrapper {
@@ -515,5 +526,9 @@ li.install.disqus-footer__item {
 
 .publisher-anchor-color a {
     color: $forestgreen !important;
+}
+
+#no-posts {
+    display:none !important;
 }
 /**************/
