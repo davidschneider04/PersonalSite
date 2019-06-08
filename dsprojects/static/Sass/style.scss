@@ -491,6 +491,26 @@ img.backicon {
     }
 }
 
+.contactemail {
+    max-width: 100vw;
+    margin-top: 5vh;
+    /* display: grid; */
+    font-size: 5vw;
+    font-weight: 800;
+    grid-row: auto;
+    grid-column: 1 / span 3;
+    a {
+        color: $forestgreen;
+        &:hover {
+            color: $green;
+            text-decoration: none;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+            font-size: 40px;
+    }
+}
+
 .projectdescriptionlongform {
     top: 2vh;
     left: 10vw;
