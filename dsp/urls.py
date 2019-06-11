@@ -26,6 +26,6 @@ urlpatterns = [
     path('davesdatadepot/saywhen/',
         views.saywhen, name='saywhen'),
     path('davesdatadepot/resume_from_plaintext/',
-        views.resume_from_plaintext, name='resume_from_plaintext')
+        views.resume_from_plaintext, name='resume_from_plaintext'),
     path('/resume/', views.resume, name='resume'),
 ]
