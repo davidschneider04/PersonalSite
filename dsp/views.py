@@ -55,37 +55,37 @@ def davesdatadepot(request):
 	projects = []
 	#saywhen
 	pname = "SayWhen— Movie/TV Scene Finder"
-	purl = "http://davidschneiderprojects.com/davesdatadepot/saywhen/"
+	purl = "http://www.davidschneiderprojects.com/davesdatadepot/saywhen/"
 	desc = "Do you have a favorite line from a favorite TV show or movie, but don't remember what episode or time it's from? Let SayWhen find the exact spot and link you to it."
 	project = create_project(pname, purl , desc)
 	projects.append(project)
 	#mapping mountains
 	pname = "Mapping Colorado Mountains"
-	purl = "http://davidschneiderprojects.com/davesdatadepot/mapping_mountains/"
+	purl = "http://www.davidschneiderprojects.com/davesdatadepot/mapping_mountains/"
 	desc = "Using Python with Folium to create an interactive map of the 100 highest peaks in Colorado."
 	project = create_project(pname, purl , desc)
 	projects.append(project)
 	#denver zipcodes
 	pname = "Mapping & Modeling Denver Zipcodes"
-	purl = "http://davidschneiderprojects.com/davesdatadepot/denver_zipcodes/"
+	purl = "http://www.davidschneiderprojects.com/davesdatadepot/denver_zipcodes/"
 	desc = "An exploratory project I did for a Coursera assignment. Using Python with Folium to plot restaurants, income, etc., zoned by ZCTA."
 	project = create_project(pname, purl , desc)
 	projects.append(project)
 	#alteryx
 	pname = "Alteryx For Data Analysis"
-	purl = "http://davidschneiderprojects.com/davesdatadepot/alteryx_creations/"
+	purl = "http://www.davidschneiderprojects.com/davesdatadepot/alteryx_creations/"
 	desc = "Alteryx is a powerful, accessible tool that I am certified in and used at my past role to create a variety of custom tools and solutions."
 	project = create_project(pname, purl , desc)
 	projects.append(project)
 	#budget spreadsheet
 	pname = "Monthly Budget Template"
-	purl = "http://davidschneiderprojects.com/davesdatadepot/budget_template/"
+	purl = "http://www.davidschneiderprojects.com/davesdatadepot/budget_template/"
 	desc = "Spreadsheet for tracking personal expenses. Goal is maximum customizability, which unfortunately requires some manual input. Most useful feature is trajectory graphing of spending by category and total."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
 	#this site
 	pname = "Code For This Website"
-	purl = "http://davidschneiderprojects.com/davesdatadepot/website_code/"
+	purl = "http://www.davidschneiderprojects.com/davesdatadepot/website_code/"
 	desc = "So meta. The internals of this site are mainly built with Django, Bootstrap, and Sass."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
