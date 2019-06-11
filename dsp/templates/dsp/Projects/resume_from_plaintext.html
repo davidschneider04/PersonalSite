@@ -17,23 +17,24 @@
 
     {% block content %}
     {% block backicon %}
-    <div>
-      <a href="http://www.davidschneiderprojects.com/davesdatadepot">
-        <img class="backicon" src="{% static 'img/backicon.svg' %}" alt=BackIcon>
-      </a>
-    </div>
+        <div>
+          <a href="http://www.davidschneiderprojects.com/davesdatadepot">
+            <img class="backicon" src="{% static 'img/backicon.svg' %}" alt=BackIcon>
+          </a>
+        </div>
     {% endblock %}
     <div class="container">
     	<div class="header">
-    		<h1>Exploring Denver.</h1>
+    		<h1>Automatically Format a Resume.</h1>
     	</div>
-      <div></div>
+      <div>
+      </div>
       <div class="websitecodegrid">
         <div class="projectdescriptionlongform">
-          Below is a Jupyter notebook I happened to create for a Coursera assignment. It's not meant to actually provide any real insights but rather show off the possibilities. However, if you have any ideas on interesting expansions I'd love to hear them and am also always open to collaboration.
+          The purpose of this project was to create the simplest way possible to edit my resume while still maintaining custom formatting. I first created custom styles in Word, saved those as a template, then use Python to apply these styles across a formatted JSON to create a stylized .docx file. I would like this automation to exclude the step to export to PDF, but I ran into too many minute formatting issues with programmatic solutions. The only way that really worked was using the "Export to PDF" functionality in Word, specifically the print-optimized version.
         </div>
         <div class="websitecodeheader">
-          <a href="https://nbviewer.jupyter.org/github/davidschneider04/Coursera_Capstone/blob/master/CapstoneProjectTheBattleOfNeighborhoods.ipynb" target="_blank">Link to code Notebook</a>
+          <a href="https://nbviewer.jupyter.org/github/davidschneider04/resume/blob/master/CreateResumeFromTemplate.ipynb" target="_blank">Link to code Notebook</a>
         </div>
       </div>
       <div id="disqus_thread">
@@ -43,8 +44,8 @@
         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
         var disqus_config = function () {
-          this.page.url = "http://davidschneiderprojects.com/davesdatadepot/denver_zipcodes/";  // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = "denver_zipcodes"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          this.page.url = "http://davidschneiderprojects.com/davesdatadepot/resume_from_plaintext/";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "resume_from_plaintext"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         (function() { // DON'T EDIT BELOW THIS LINE
           var d = document, s = d.createElement('script');
