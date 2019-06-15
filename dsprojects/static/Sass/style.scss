@@ -522,6 +522,17 @@ img.backicon {
     }
 }
 
+.resumedescription {
+    top: 2vh;
+    left: 10vw;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 5vh;
+    @include media-breakpoint-up(lg) {    
+        font-size: 20px;
+    }
+}
+
 .acknowledgement {
     display:grid;
     grid-row: auto;
