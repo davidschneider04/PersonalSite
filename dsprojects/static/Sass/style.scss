@@ -45,6 +45,7 @@ $forestgreen:#012800;
 $green:#024e00;
 $white:#fff;
 $lightgray:#CFCFCF;
+$saywhenblue:#6D7FCC;
 
 /*TAGS*/
 * {
@@ -149,6 +150,10 @@ $lightgray:#CFCFCF;
 .saywhenlogo {
     max-width: 100%;
     height: auto;
+    border: $saywhenblue;
+    border-width: 30px;
+    border-style: solid;
+    border-radius: 30px;
 }
 
 .wrapper {
