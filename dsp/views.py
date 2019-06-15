@@ -72,7 +72,7 @@ def davesdatadepot(request):
 	#denver zipcodes
 	pname = "Mapping & Modeling Denver Zipcodes"
 	purl = "http://www.davidschneiderprojects.com/davesdatadepot/denver_zipcodes/"
-	desc = "An exploratory project I did for a Coursera assignment. Using Python with Folium to plot restaurants, income, etc., zoned by ZCTA."
+	desc = "Using Python with Folium to plot restaurants, income, etc., zoned by ZCTA, and sklearn to create a cluster model."
 	project = create_project(pname, purl , desc)
 	projects.append(project)
 	#resume
@@ -88,11 +88,11 @@ def davesdatadepot(request):
 	project = create_project(pname, purl, desc)
 	projects.append(project)
 	#alteryx
-	pname = "Alteryx For Data Analysis"
-	purl = "http://www.davidschneiderprojects.com/davesdatadepot/alteryx_creations/"
-	desc = "Alteryx is a powerful, accessible tool that I am certified in and used at my past role to create a variety of custom tools and solutions."
-	project = create_project(pname, purl , desc)
-	projects.append(project)
+	#pname = "Alteryx For Data Analysis"
+	#purl = "http://www.davidschneiderprojects.com/davesdatadepot/alteryx_creations/"
+	#desc = "Alteryx is a powerful, accessible tool that I am certified in and used at my past role to create a variety of custom tools and solutions."
+	#project = create_project(pname, purl , desc)
+	#projects.append(project)
 	#this site
 	pname = "Code For This Website"
 	purl = "http://www.davidschneiderprojects.com/davesdatadepot/website_code/"
