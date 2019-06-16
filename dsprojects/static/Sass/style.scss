@@ -282,6 +282,7 @@ button.btn.btn_bottombar {
 .collapsebuttonrow_bottombar_btn {
     width: $fullwidth;
     background: $forestgreen;
+    border-radius:0;
     &:hover {
     	background: $green;
     }
