@@ -487,6 +487,7 @@ img.backicon {
     grid-column: 1 / span 3;
     color: $forestgreen;
     a {
+        color: $forestgreen;
         &:hover {
             color: $green;
             text-decoration: none;
