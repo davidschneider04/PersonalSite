@@ -57,12 +57,12 @@ $saywhenblue:#6D7FCC;
 /*CLASSES*/
 .container {
     display: grid;
-    height:$fullheight;
+    /*height:$fullheight;*/
     width:$fullwidth;
     min-width:$fullwidth;
-    grid-template-rows: $header_height 60vh 1fr 2fr;
+    grid-template-rows: $header_height 60vh 1fr 1fr;
     grid-template-columns: 5vw 1fr; 
-    min-height:$fullheight;
+    /*min-height:$fullheight;*/
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
@@ -566,10 +566,12 @@ img.backicon {
 /*DISQUS STUFF*/
 /**************/
 div#disqus_thread {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2 / span 1;
     margin-right: 5vw;
     margin-top: auto;
+    margin-bottom: 15vh;
+    display: inline-block;
 }
 
 li#thread-share-bar {
