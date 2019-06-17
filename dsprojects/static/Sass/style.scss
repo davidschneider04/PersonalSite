@@ -60,7 +60,7 @@ $saywhenblue:#6D7FCC;
     height:$fullheight;
     width:$fullwidth;
     min-width:$fullwidth;
-    grid-template-rows: $header_height 50vh 1fr;
+    grid-template-rows: $header_height 60vh 1fr 2fr;
     grid-template-columns: 5vw 1fr; 
     min-height:$fullheight;
     padding-right: 0;
