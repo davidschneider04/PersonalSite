@@ -111,8 +111,6 @@ $saywhenblue:#6D7FCC;
     h2 {
         &:hover {
                 border-color: $green;
-                border-style: solid;
-                border-width: medium;
                 background: $green;
             }
         line-height: 5vh;
@@ -121,9 +119,6 @@ $saywhenblue:#6D7FCC;
         font-weight: bold;
         padding-left: 2.5vw;
         a {
-            border-color: $forestgreen;
-            border-style: solid;
-            border-width: medium;
             font-size: 2.5rem;
             color: $lightgray;
             line-height: 5vh;
@@ -131,13 +126,9 @@ $saywhenblue:#6D7FCC;
             text-decoration: none;
             &:active {
                 background-color: $green;
-                border-color: $green;
                 color:$lightgray;
             }
             &:hover {
-                border-color: $green;
-                border-style: solid;
-                border-width: medium;
                 background: $green;
             }
         }
