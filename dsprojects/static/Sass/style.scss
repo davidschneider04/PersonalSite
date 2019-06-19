@@ -109,6 +109,12 @@ $saywhenblue:#6D7FCC;
         width: 65vw;
     }
     h2 {
+        &:hover {
+                border-color: $green;
+                border-style: solid;
+                border-width: medium;
+                background: $green;
+            }
         line-height: 5vh;
         background-color: $forestgreen;
         color: $lightgray;
