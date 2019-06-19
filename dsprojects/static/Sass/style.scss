@@ -118,12 +118,20 @@ $saywhenblue:#6D7FCC;
         color: $lightgray;
         font-weight: bold;
         padding-left: 2.5vw;
+        @include media-breakpoint-up(lg) {
+            padding-right: 1.5vw;
+            padding-top: .5vh;
+            padding-bottom: 1vh;
+        }
         a {
             font-size: 2.5rem;
             color: $lightgray;
             line-height: 5vh;
             display: block;
             text-decoration: none;
+            @include media-breakpoint-up(lg) {
+                font-size: 4vh;
+            }
             &:active {
                 background-color: $green;
                 color:$lightgray;
@@ -367,6 +375,9 @@ img.backicon {
 
 .demovid {
     width: 80vw;
+    @include media-breakpoint-up(lg) {
+        width: 60vw;
+    }
 }
 
 .resume_iframe {
@@ -473,6 +484,37 @@ img.backicon {
     margin-left: 0;
 }
 
+.acknowledgmentgrid {
+    display:grid;
+    grid-template: 20vh 30vh 30vh/20vw 20vw;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    @include media-breakpoint-up(lg) {
+        margin-top: 10vh;
+    }
+}
+
+.acknowledgmentheader {
+    max-width: 100vw;
+    margin-top: 5vh;
+    /* display: grid; */
+    font-size: 7vw;
+    font-weight: 800;
+    grid-row: auto;
+    grid-column: 1 / span 2;
+    color: $forestgreen;
+    a {
+        color: $forestgreen;
+        &:hover {
+            color: $green;
+            text-decoration: none;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+            font-size: 70px;
+    }
+}
+
 .websitecodegrid {
     display:grid;
     grid-template: 20vh 30vh 1fr/20vw 20vw 20vw 1fr;
@@ -485,7 +527,7 @@ img.backicon {
     font-size: 7vw;
     font-weight: 800;
     grid-row: auto;
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 2;
     color: $forestgreen;
     a {
         color: $forestgreen;
@@ -544,11 +586,13 @@ img.backicon {
 .acknowledgement {
     display:grid;
     grid-row: auto;
-    grid-column:2;
+    grid-column:auto;
     margin-top: 5vh;
     @include media-breakpoint-up(lg) {    
-        grid-row: 2;
-        grid-column: auto;;
+        grid-row: auto;
+        grid-column: auto;
+        margin-top:10vw;
+
     }
 }
 
