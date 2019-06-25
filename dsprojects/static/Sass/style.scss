@@ -124,7 +124,7 @@ $saywhenblue:#6D7FCC;
             padding-bottom: 1vh;
         }
         a {
-            font-size: 2.5rem;
+            font-size: 4vw;
             color: $lightgray;
             line-height: 5vh;
             display: block;
@@ -142,7 +142,7 @@ $saywhenblue:#6D7FCC;
         }
     }
     p {
-        font-size: 2.5rem;
+        font-size: 4vw;
         margin-left: 5vw;
         margin-right: 5vw;
         text-align: justify;
@@ -155,10 +155,6 @@ $saywhenblue:#6D7FCC;
 .saywhenlogo {
     max-width: 100%;
     height: auto;
-    border: $saywhenblue;
-    border-width: 30px;
-    border-style: solid;
-    border-radius: 30px;
 }
 
 .wrapper {
@@ -491,6 +487,7 @@ img.backicon {
     margin-top: 5vh;
     @include media-breakpoint-up(lg) {
         margin-top: 10vh;
+        grid-template: 20vh 20vh 20vh/20vw 30vw;
     }
 }
 
@@ -592,7 +589,6 @@ img.backicon {
         grid-row: auto;
         grid-column: auto;
         margin-top:10vw;
-
     }
 }
 
@@ -603,6 +599,9 @@ img.backicon {
     margin-right:5vw;
     max-width: 20vw;
     max-height: 30vh;
+    @include media-breakpoint-up(lg) {
+        max-height: 20vh;
+    }
 }
 
 
