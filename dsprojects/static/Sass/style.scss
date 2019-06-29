@@ -74,7 +74,7 @@ $saywhenblue:#6D7FCC;
 
 .container-fluid {
     width: 100%;
-    height:$fullheight;
+    height:fit-content;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
@@ -413,6 +413,7 @@ img.backicon {
 
 .resume_svg {
     width:100%;
+    margin-bottom:30vh;
 }
 
 .resumebutton {
