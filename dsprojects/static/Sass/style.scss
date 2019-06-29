@@ -404,7 +404,6 @@ img.backicon {
     margin-top: 1vh;
     grid-row: 3;
     margin-left: 2.5vw;
-    height: 70vh;
     width: 95vw;
     @include media-breakpoint-up(lg) {
         display: none;
@@ -417,11 +416,11 @@ img.backicon {
 
 .resumebutton {
     position: relative;
-    left: 65vw;
+    left: 75vw;
     top: -1vh;
     height: 4vh;
     width: 12.5vw;
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: 700;
     background-color: $forestgreen;
     a {
@@ -441,7 +440,7 @@ img.backicon {
 .resumedownload {
     position: relative;
     top: 2vh;
-    left: 10vw;
+    margin-left: 10vw;
     font-weight: 700;
     color: $forestgreen;
     font-size: 3vw;
