@@ -394,10 +394,10 @@ img.backicon {
 
 .resumebutton {
     position: relative;
-    left: 55vw;
-    top: -5vh;
-    height: 7.5vh;
-    width: 10vw;
+    left: 65vw;
+    top: -1vh;
+    height: 4vh;
+    width: 12.5vw;
     font-size: 1.5vw;
     font-weight: 700;
     background-color: $forestgreen;
@@ -406,6 +406,12 @@ img.backicon {
         &:hover {
             text-decoration: none;
         }
+    }
+    @include media-breakpoint-up(lg) {
+        left: 55vw;
+        top: -5vh;
+        height: 7.5vh;
+        width: 10vw;
     }
 }
 
