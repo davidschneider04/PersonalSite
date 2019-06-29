@@ -375,6 +375,7 @@ img.backicon {
 
 .demovid {
     width: 80vw;
+    margin-left: 10vw;
     @include media-breakpoint-up(lg) {
         width: 60vw;
     }
@@ -577,6 +578,7 @@ img.backicon {
     font-size: 5.5vw;
     font-weight: 800;
     grid-row: auto;
+    margin-left: 5vw;
     margin-right: 5vw;
     grid-column: 1 / span 2;
     color: $forestgreen;
@@ -624,13 +626,12 @@ img.backicon {
 }
 
 .resumedescription {
-    top: 2vh;
-    left: 10vw;
+    margin-left: 5vw;
     font-weight: 600;
     font-size: 20px;
-    margin-top: 5vh;
+    margin-top: 2.5vh;
     grid-column: 1 / span 2;
-    margin-right: 7.5vh;
+    margin-right: 2.5vw;
     a {
         color: #212529;
     }
