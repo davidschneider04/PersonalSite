@@ -222,6 +222,7 @@ $saywhenblue:#6D7FCC;
             padding: 10px;
             font-size: 1.1em;
             display: block;
+            margin-left: 1vw;
             &:hover {
                 color: $white;
                 background: $green;
@@ -391,7 +392,7 @@ img.backicon {
     }
 }
 
-button.resumebutton {
+.resumebutton {
     position: relative;
     left: 55vw;
     top: -5vh;
