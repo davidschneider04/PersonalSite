@@ -387,8 +387,27 @@ img.backicon {
     grid-row: 3;
     height: 70vh;
     width: 80vw;
+    display:none;
     @include media-breakpoint-up(lg) {
+        display: grid;
         width: 60vw;
+        grid-column: 2 / span 3;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        grid-row: 3;
+        height: 70vh;
+    }
+}
+
+.resume_svg {
+    grid-column: 2 / span 3;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    grid-row: 3;
+    height: 70vh;
+    width: 80vw;
+    @include media-breakpoint-up(lg) {
+        display: none;
     }
 }
 
@@ -609,6 +628,9 @@ img.backicon {
     margin-top: 5vh;
     grid-column: 1 / span 2;
     margin-right: 7.5vh;
+    a {
+        color: #212529;
+    }
     @include media-breakpoint-up(lg) {    
         font-size: 20px;
     }
