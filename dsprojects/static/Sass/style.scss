@@ -162,6 +162,7 @@ $saywhenblue:#6D7FCC;
     align-items: stretch;
     background-color:$lightgray;
     min-width:$fullwidth;
+    height: fit-content;
 }
 
 .header {
@@ -399,16 +400,19 @@ img.backicon {
     }
 }
 
-.resume_svg {
-    grid-column: 2 / span 3;
-    margin-top: 5vh;
-    margin-left: 5vw;
+.resume_svg_cont {
+    margin-top: 1vh;
     grid-row: 3;
+    margin-left: 2.5vw;
     height: 70vh;
-    width: 80vw;
+    width: 95vw;
     @include media-breakpoint-up(lg) {
         display: none;
     }
+}
+
+.resume_svg {
+    width:100%;
 }
 
 .resumebutton {

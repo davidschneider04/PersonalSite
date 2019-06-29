@@ -130,6 +130,7 @@
   align-items: stretch;
   background-color: #CFCFCF;
   min-width: 100vw;
+  height: fit-content;
 }
 
 .header {
@@ -387,18 +388,21 @@ img.backicon {
   }
 }
 
-.resume_svg {
-  grid-column: 2/span 3;
-  margin-top: 5vh;
-  margin-left: 5vw;
+.resume_svg_cont {
+  margin-top: 1vh;
   grid-row: 3;
+  margin-left: 2.5vw;
   height: 70vh;
-  width: 80vw;
+  width: 95vw;
 }
 @media (min-width: 992px) {
-  .resume_svg {
+  .resume_svg_cont {
     display: none;
   }
+}
+
+.resume_svg {
+  width: 100%;
 }
 
 .resumebutton {
