@@ -418,10 +418,10 @@ img.backicon {
 
 .resumebutton {
     position: relative;
-    left: 75vw;
+    left: 70vw;
     top: -1vh;
     height: 4vh;
-    width: 12.5vw;
+    width: 20vw;
     font-size: 2vw;
     font-weight: 700;
     background-color: $forestgreen;
@@ -432,10 +432,10 @@ img.backicon {
         }
     }
     @include media-breakpoint-up(lg) {
-        left: 55vw;
+        left: 50vw;
         top: -5vh;
         height: 7.5vh;
-        width: 10vw;
+        width: 20vw;
     }
 }
 
