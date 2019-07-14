@@ -58,7 +58,7 @@ def create_project(pname, purl, desc):
 def davesdatadepot(request):
 	projects = []
 	#findscene
-	pname = "FindScene — App to Find Video Clips"
+	pname = "FindScene — App to Find Video Links"
 	purl = "http://www.davidschneiderprojects.com/davesdatadepot/findscene/"
 	desc = "Do you have a favorite line from a favorite TV show or movie, but don't remember what episode or time it's from? Let FindScene find the exact spot and link you to it."
 	project = create_project(pname, purl , desc)
