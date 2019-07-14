@@ -39,9 +39,9 @@ def alteryx_creations(request):
 	context={}
 	return render(request, 'dsp/Projects/alteryx_creations.html', context)
 
-def saywhen(request):
+def findscene(request):
 	context={}
-	return render(request, 'dsp/Projects/saywhen.html', context)
+	return render(request, 'dsp/Projects/findscene.html', context)
 
 def website_code(request):
 	context={}
