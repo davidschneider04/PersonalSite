@@ -12,9 +12,9 @@
 
   @media screen and (min-width: $min-vw) {
     @each $property in $properties {
-      #{$property}: calc(#{$min-value} 
-      + #{strip-unit($max-value - $min-value)} 
-      * (100vw - #{$min-vw}) 
+      #{$property}: calc(#{$min-value}
+      + #{strip-unit($max-value - $min-value)}
+      * (100vw - #{$min-vw})
       / #{strip-unit($max-vw - $min-vw)});
     }
   }
@@ -44,8 +44,8 @@ $sidebarwidth:20vw;
 $forestgreen:#012800;
 $green:#024e00;
 $white:#fff;
-$lightgray:#CFCFCF;
-$saywhenblue:#6D7FCC;
+$lightgray:#cfcfcf;
+$saywhenblue:#6d7fcc;
 
 /*TAGS*/
 * {
@@ -84,7 +84,7 @@ $saywhenblue:#6D7FCC;
 .threecolcontainer {
     display: grid;
     height: $bottombar_height;
-    grid-template: $bottombar_height / repeat(3, 1fr); 
+    grid-template: $bottombar_height / repeat(3, 1fr);
 }
 
 .projects_container {
@@ -323,7 +323,7 @@ button.btn.btn_bottombar {
 .threecolcontainer {
     display: grid;
     height: $bottombar_height;
-    grid-template: $bottombar_height / repeat(3, 1fr); 
+    grid-template: $bottombar_height / repeat(3, 1fr);
 }
 
 .bottombarcol {
@@ -622,7 +622,7 @@ img.backicon {
     font-weight: 600;
     font-size: 3vw;
     margin-top: 5vh;
-    @include media-breakpoint-up(lg) {    
+    @include media-breakpoint-up(lg) {
         font-size: 30px;
     }
 }
@@ -637,7 +637,7 @@ img.backicon {
     a {
         color: #212529;
     }
-    @include media-breakpoint-up(lg) {    
+    @include media-breakpoint-up(lg) {
         font-size: 20px;
     }
 }
@@ -647,7 +647,7 @@ img.backicon {
     grid-row: auto;
     grid-column:auto;
     margin-top: 5vh;
-    @include media-breakpoint-up(lg) {    
+    @include media-breakpoint-up(lg) {
         grid-row: auto;
         grid-column: auto;
         margin-top:10vw;
