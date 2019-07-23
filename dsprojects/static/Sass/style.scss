@@ -26,26 +26,24 @@
   }
 }
 
-/* Override Bootstrap default breakpoints */
-
-
 /*CONSTANTS*/
 /*sizes*/
 $banner_height:15vh;
-$header_height:15vh;
 $bottombar_height:10vh;
 $disqus_height:15vh;
-$side_padding:3vw;
-$left_indent:10vw;
-$fullwidth:100vw;
 $fullheight:100vh;
+$fullwidth:100vw;
+$header_height:15vh;
+$left_indent:10vw;
+$side_padding:3vw;
 $sidebarwidth:20vw;
+
 /*colors*/
 $forestgreen:#012800;
 $green:#024e00;
-$white:#fff;
 $lightgray:#cfcfcf;
 $saywhenblue:#6d7fcc;
+$white:#fff;
 
 /*TAGS*/
 * {
