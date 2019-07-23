@@ -1,8 +1,8 @@
-@import "scss/_functions.scss";
-@import "scss/_mixins.scss";
-@import "scss/_variables.scss";
-@import "scss/mixins/_breakpoints.scss";
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import 'scss/_functions.scss';
+@import 'scss/_mixins.scss';
+@import 'scss/_variables.scss';
+@import 'scss/mixins/_breakpoints.scss';
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700';
 
 /*Sass mixins*/
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
@@ -658,8 +658,6 @@ img.backicon {
         max-height: 20vh;
     }
 }
-
-
 
 /*DISQUS STUFF*/
 /**************/
