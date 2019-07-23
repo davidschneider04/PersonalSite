@@ -28,21 +28,21 @@
 
 /*CONSTANTS*/
 /*sizes*/
-$banner_height:15vh;
-$bottombar_height:10vh;
-$disqus_height:15vh;
-$fullheight:100vh;
-$fullwidth:100vw;
-$header_height:15vh;
-$left_indent:10vw;
-$side_padding:3vw;
-$sidebarwidth:20vw;
+$banner_height: 15vh;
+$bottombar_height: 10vh;
+$disqus_height: 15vh;
+$fullheight: 100vh;
+$fullwidth: 100vw;
+$header_height: 15vh;
+$left_indent: 10vw;
+$side_padding: 3vw;
+$sidebarwidth: 20vw;
 /*colors*/
-$forestgreen:#012800;
-$green:#024e00;
-$lightgray:#cfcfcf;
-$saywhenblue:#6d7fcc;
-$white:#fff;
+$forestgreen: #012800;
+$green: #024e00;
+$lightgray: #cfcfcf;
+$saywhenblue: #6d7fcc;
+$white: #fff;
 /*         */
 
 * {
@@ -55,7 +55,7 @@ $white:#fff;
     display: grid;
     grid-template: $header_height 60vh 1fr 1fr / 5vw 1fr;
     min-width: $fullwidth;
-    padding: 0 0 0 0;
+    padding: 0;
     width: $fullwidth;
     @include media-breakpoint-up(lg) {
         min-width: auto;
@@ -64,7 +64,7 @@ $white:#fff;
 
 .container-fluid {
     height: fit-content;
-    padding: 0 0 0 0;
+    padding: 0;
     width: 100%;
 }
 
@@ -79,7 +79,7 @@ $white:#fff;
     grid-template: $header_height auto / $left_indent 80vw 1fr;
     margin: 0 auto 15vh auto;
     min-height: $fullheight;
-    padding: 0 0 0 0;
+    padding: 0;
 }
 
 .project_entry {
@@ -463,7 +463,7 @@ img.backicon {
     min-height: 100vh;
     width: 100vw;
     grid-template: $header_height 10vh auto / 10vw 15vw 15vw 30vw 1fr;
-    padding: 0 0 0 0;
+    padding: 0;
     margin: 0 auto 15vh auto;
     @include media-breakpoint-up(lg) {
         margin: 0 2vh 15vh auto;
@@ -494,7 +494,7 @@ img.backicon {
     height: 100vh;
     margin: 0 auto 0 0;
     min-height: 100vh;
-    padding: 0 0 0 0;
+    padding: 0;
     width: 100vw;
 }
 
