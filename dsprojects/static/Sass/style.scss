@@ -55,8 +55,7 @@ $white:#fff;
     display: grid;
     grid-template: $header_height 60vh 1fr 1fr / 5vw 1fr;
     min-width: $fullwidth;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 0 0 0;
     width: $fullwidth;
     @include media-breakpoint-up(lg) {
         min-width: auto;
@@ -65,8 +64,7 @@ $white:#fff;
 
 .container-fluid {
     height: fit-content;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 0 0 0;
     width: 100%;
 }
 
@@ -81,8 +79,7 @@ $white:#fff;
     grid-template: $header_height auto / $left_indent 80vw 1fr;
     margin: 0 auto 15vh auto;
     min-height: $fullheight;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 0 0 0;
 }
 
 .project_entry {
@@ -106,11 +103,9 @@ $white:#fff;
         color: $lightgray;
         font-weight: bold;
         line-height: 5vh;
-        padding-left: 2.5vw;
+        padding: 0 0 0 2.5vw;
         @include media-breakpoint-up(lg) {
-            padding-bottom: 1vh;
-            padding-right: 1.5vw;
-            padding-top: .5vh;
+            padding: .5vh 1.5vw 1vh 2.5vw;
         }
         a {
             color: $lightgray;
@@ -167,7 +162,7 @@ $white:#fff;
         font-weight: bold;
         grid-area: 1 / 1 / 1 / span 5;
         height: $header_height;
-        padding-bottom: 1vw;
+        padding: 0 0 1vw 0;
         text-indent: 5vw;
         vertical-align: bottom;
         white-space: nowrap;
@@ -437,8 +432,7 @@ img.backicon {
     display: grid;
     grid-template: $header_height 5vh 5vh 5vh 1fr/5vw 1fr;
     height: $fullheight;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     margin: 0 auto 0 0;
     min-height: $fullheight;
     width: $fullwidth;
@@ -469,8 +463,7 @@ img.backicon {
     min-height: 100vh;
     width: 100vw;
     grid-template: $header_height 10vh auto / 10vw 15vw 15vw 30vw 1fr;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 0 0 0;
     margin: 0 auto 15vh auto;
     @include media-breakpoint-up(lg) {
         margin: 0 2vh 15vh auto;
@@ -487,7 +480,7 @@ img.backicon {
     grid-template: 1fr 1fr / 45vw 40vw;
     height: max-content;
     margin: 1vw 8vw 0 2vw;
-    padding-bottom: 1vh;
+    padding: 0 0 1vh 0;
     width: 85vw;
     @include media-breakpoint-up(lg) {
         grid-template-columns: 45vw 30vw;
@@ -501,8 +494,7 @@ img.backicon {
     height: 100vh;
     margin: 0 auto 0 0;
     min-height: 100vh;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 0 0 0;
     width: 100vw;
 }
 
