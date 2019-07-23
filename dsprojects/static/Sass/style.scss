@@ -104,9 +104,11 @@ $white:#fff;
     h2 {
         &:hover {
             background: $green;
-            border-color: $green;
         }
         background-color: $forestgreen;
+        border-color: $forestgreen;
+        border-style: solid;
+        border-width: 0 0 medium 0;
         color: $lightgray;
         font-weight: bold;
         line-height: 5vh;
