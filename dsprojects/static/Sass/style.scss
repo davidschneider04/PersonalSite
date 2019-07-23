@@ -57,12 +57,10 @@ $saywhenblue:#6d7fcc;
 /*CLASSES*/
 .container {
     display: grid;
-    /*height:$fullheight;*/
-    width:$fullwidth;
-    min-width:$fullwidth;
+    width: $fullwidth;
+    min-width: $fullwidth;
     grid-template-rows: $header_height 60vh 1fr 1fr;
     grid-template-columns: 5vw 1fr;
-    /*min-height:$fullheight;*/
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
@@ -211,7 +209,7 @@ $saywhenblue:#6d7fcc;
         display: flex;
         background: $forestgreen;
         color: $white;
-        transition: all 0.3s;
+        transition: all .3s;
         min-width: $sidebarwidth;
         max-width: $sidebarwidth;
         min-height: 50vh;
