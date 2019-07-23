@@ -375,7 +375,7 @@ img.backicon {
         grid-column: 2 / span 3;
         grid-row: 3;
         height: 70vh;
-        margin-left: 5vw;
+        margin: 0 0 2.5vh 5vw;
         width: 60vw;
     }
 }
@@ -412,7 +412,7 @@ img.backicon {
     @include media-breakpoint-up(lg) {
         height: 7.5vh;
         left: 50vw;
-        top: -5vh;
+        top: -3vh;
         width: 20vw;
     }
 }
@@ -473,7 +473,7 @@ img.backicon {
     padding-right: 0;
     margin: 0 auto 15vh auto;
     @include media-breakpoint-up(lg) {
-        margin-bottom: 2vh;
+        margin: 0 2vh 15vh auto;
     }
 }
 
@@ -512,7 +512,7 @@ img.backicon {
     margin: 5vh 0 0 10vw;
     @include media-breakpoint-up(lg) {
         grid-template: 20vh 20vh 20vh / 20vw 30vw;
-        margin-top: 10vh;
+        margin: 10vh 0 0 10vw;
     }
 }
 
@@ -612,7 +612,7 @@ img.backicon {
     @include media-breakpoint-up(lg) {
         grid-column: auto;
         grid-row: auto;
-        margin-top: 10vw;
+        margin: 10vw 0 0 0;
     }
 }
 
@@ -620,7 +620,6 @@ img.backicon {
     display: grid;
     grid-column: auto;
     grid-row: 2;
-    margin-right: 5vw;
     margin: 0 5vw 0 0;
     max-height: 30vh;
     max-width: 20vw;
