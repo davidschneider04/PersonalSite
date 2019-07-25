@@ -27,6 +27,8 @@
 /*           */
 
 /*CONSTANTS*/
+/*variables*/
+$font_fam: Poppins;
 /*sizes*/
 $banner_height: 15vh;
 $bottombar_height: 10vh;
@@ -197,8 +199,7 @@ $white: #fff;
         ul li a {
             color: $lightgray;
             display: block;
-            font-size: 1.1em;
-            font-weight: bold;
+            font: bold 1.1em $font_fam;
             padding: 10px;
             &:hover {
                 background: $green;
@@ -208,7 +209,7 @@ $white: #fff;
         }
         ul.components {
             border-bottom: 1px solid $forestgreen;
-            font-size: 1.5vw;
+            font: 1.5vw $font_fam;
             padding: $side_padding 0;
             text-indent: .5vw;
         }
