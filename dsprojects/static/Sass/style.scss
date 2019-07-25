@@ -230,6 +230,17 @@ $white: #fff;
     @include media-breakpoint-up(lg) {
         display: none;
     }
+    button {
+        background-color: $forestgreen;
+        border-radius: 0;
+        color: $lightgray;
+        height: 100%;
+        padding: 0;
+        width: 100%;
+        &:hover {
+            background: $green;
+        }
+    }
 }
 
 button.btn.btn_bottombar {
