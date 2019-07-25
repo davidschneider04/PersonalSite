@@ -83,9 +83,7 @@ $white: #fff;
 }
 
 .project_entry {
-    border-color: $forestgreen;
-    border-style: solid;
-    border-width: medium;
+    border: medium solid $forestgreen;
     grid-column: 2 / span 1;
     height: min-content;
     margin: 2.5vh 0 0 0;
@@ -97,8 +95,7 @@ $white: #fff;
             background: $green;
         }
         background-color: $forestgreen;
-        border-color: $forestgreen;
-        border-style: solid;
+        border: solid $forestgreen;
         border-width: 0 0 medium 0;
         color: $lightgray;
         font-weight: bold;
@@ -471,10 +468,8 @@ img.backicon {
 }
 
 .projectitem {
-    border: #444;
+    border: thin solid #444;
     border-radius: 10px;
-    border-style: solid;
-    border-width: thin;
     display: grid;
     grid-column: 1/span 4;
     grid-template: 1fr 1fr / 45vw 40vw;
