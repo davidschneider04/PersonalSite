@@ -11,7 +11,7 @@ class ParkingTicketForm(forms.ModelForm):
     week_of_month = autocomplete.Select2ListChoiceField(choice_list=['1st','2nd','3rd','4th'])#, widget=autocomplete.ListSelect2(url='dsp:ptform-options-autocomplete'))
     class Meta:
         model = PTFormInput
-        fields = ('day_of_week', 'week_of_month',)
+        fields = ('week_of_month', 'day_of_week',)
         widgets = {
         	'week_of_month': autocomplete.ListSelect2(url='dsp:ptform-options-autocomplete'),
             'day_of_week': autocomplete.ListSelect2(url='dsp:ptform-options-autocomplete'),
