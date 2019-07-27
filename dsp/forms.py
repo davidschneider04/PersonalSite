@@ -4,6 +4,7 @@ from django import forms
 from dal import autocomplete
 
 from . import views
+from .models import PTFormInput
 
 class ParkingTicketForm(forms.ModelForm):
     day_of_week = autocomplete.Select2ListChoiceField(choice_list=list(calendar.day_name), widget=autocomplete.ListSelect2(url='dsp:ptform-options-autocomplete'))
