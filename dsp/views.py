@@ -60,24 +60,24 @@ def schedule_creator(request):
 	results = create_schedules(request.POST[''])
 
 class PTFormInputAutocompleteDays(autocomplete.Select2ListView):
-    def get_list(self):
-        options = ParkingTicketForm.objects.all()
-        options_tups = [i.option for i in option]
-        return options_tups
+	def get_list(self):
+		options = ParkingTicketForm.objects.all()
+		options_tups = [i.option for i in option]
+		return options_tups
 
 def parking_tickets(request):
 	if request.method == 'POST':
 		# create a form instance and populate it with data from the request:
-        form = ParkingTicketForm(request.POST)
-        # check whether it's valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required, redirect to a new URL:
-            return schedule_creator(request)
-    # if a GET (or any other method) we'll create a blank form
-    else:
-        form = ParkingTicketForm()
-    context = {'form': form}
-    return render(request, 'dsp/Projects/parking_tickets.html', context)
+		form = ParkingTicketForm(request.POST)
+		# check whether it's valid:
+		if form.is_valid():
+			# process the data in form.cleaned_data as required, redirect to a new URL:
+			return schedule_creator(request)
+	# if a GET (or any other method) we'll create a blank form
+	else:
+		form = ParkingTicketForm()
+	context = {'form': form}
+	return render(request, 'dsp/Projects/parking_tickets.html', context)
 
 # all projects
 def davesdatadepot(request):
