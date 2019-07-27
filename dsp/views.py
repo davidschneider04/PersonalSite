@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 
-from . import create_schedules
+from . import schedule_creator
 
 def home(request):
 	context={}
