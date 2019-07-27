@@ -58,6 +58,7 @@ $white: #fff;
     grid-template: $header_height 60vh 1fr 1fr / 5vw 1fr;
     min-width: $fullwidth;
     padding: 0;
+    margin: 0;
     width: $fullwidth;
     @include media-breakpoint-up(lg) {
         min-width: auto;
