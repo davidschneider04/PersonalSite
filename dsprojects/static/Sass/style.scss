@@ -628,6 +628,31 @@ img.backicon {
     }
 }
 
+.formgrid {
+    display: grid;
+    height: 50vh;
+    width: 90vw;
+    grid-template: 10vh 10vh 10vh 10vh 10vh/1fr;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    @include media-breakpoint-up(lg) {
+        display: grid;
+        height: 50vh;
+        width: 0;
+        grid-template: 10vh 10vh 10vh 10vh 10vh/1fr;
+        margin-top: 2vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
+.formfield {
+    display: grid;
+    grid-area: auto / auto / 1 / 1;
+}
+
+
 /*DISQUS STUFF*/
 div#disqus_thread {
     grid-column: 2 / span 1;
