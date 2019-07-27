@@ -30,9 +30,9 @@
 
     <div class="container-fluid">
     	<div class="header">
-    		<h1 style="font-size:5vw; margin:2.5vh 5vw;">Create Reminders to Avoid Tickets.</h1>
+    		<h1 style="font-size:5vw">Create Reminders to Avoid Tickets.</h1>
     	</div>
-      <div class="resumedescription" style="grid-column:2 / span 4">
+      <div class="resumedescription" style="grid-column:2 / span 4; margin:2.5vh 5vw;">
         Denver gives you a ticket if you don't move your car according to their schedule. There seems to be no easy way to create a reminder for the "3rd Wednesday of the month" in any calendar app I had, so I was happy to find that the city offers to send text message reminders via an online app. This worked great for a few weeks, until it did not, and I found myself with another ticket. Since the city assumes no responsibility for failure of the service it provides, I decided to just make my own service. Hypocritically, it too will assume no liability, because I don't have the money for that.
       </div>
       <form class="mediaform" action="{% url 'dsp:parking_tickets' %}" method="post">
