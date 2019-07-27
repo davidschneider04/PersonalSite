@@ -26,8 +26,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     #'formtools',
-    'dal',
-    'dal_select2',
+
     'bootstrap4',
     'taggit',
     'django.contrib.admin',
@@ -38,6 +37,9 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'dsp',
+    'storage',
+    'dal',
+    'dal_select2',
 ]
 
 MIDDLEWARE = [
