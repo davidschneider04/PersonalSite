@@ -17,6 +17,8 @@ django-heroku = "*"
 gunicorn = "*"
 django-bootstrap4 = "*"
 django-taggit = "*"
-
+django-autocomplete-light = "*"
+django-formtools = "*"
+django-storages = "*"
 [dev-packages]
 
