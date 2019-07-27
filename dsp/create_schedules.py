@@ -28,7 +28,7 @@ def get_events(week_num, day_of_week, date=datetime.date.today(), yearsout=10):
     assert isinstance(week_num, int) and week_num>=1 and week_num<=4, "week number out of range"
     assert isinstance(day_of_week, int) and day_of_week>=0 and day_of_week<=6, "day number ranges in python from 0-6"
     initdate = date
-    date = pytz.timezone('US/Mountain').localize(date)
+    #date = pytz.timezone('US/Mountain').localize(date)
     cal = ics.Calendar()
     date = floor_month(date)
     while date.year < 2029:
