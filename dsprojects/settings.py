@@ -22,15 +22,14 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "el%0urhms_2ug2wzxxx+90n^h4e*$5tac2&r5x(iwy1p974*-f"
 
-
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-    'formtools',
+    #'formtools',
     'dal',
     'dal_select2'
     'bootstrap4',
-    "taggit",
+    'taggit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
