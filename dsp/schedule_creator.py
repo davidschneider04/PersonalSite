@@ -21,7 +21,7 @@ def create_parking_event(date, week_num, day_of_week):
     suff = weeks_suffix[week_num]
     week_fmt = f'{week_num}{suff}'
     e.name = f'Parking Alert: {week_fmt} {day_fmt} of month.'
-    e.begin = date.strftime('%Y-%m-%d %I:%M:%S')
+    e.begin = date.strftime('%Y-%m-%d %I:%M:%M:%S')
     return e
 
 def get_events(week_num, day_of_week, date=datetime.date.today(), yearsout=10):
