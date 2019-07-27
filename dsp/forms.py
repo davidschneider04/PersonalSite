@@ -13,6 +13,6 @@ class ParkingTicketForm(forms.ModelForm):
         model = PTFormInput
         fields = ('day_of_week', 'week_of_month',)
         widgets = {
+        	'week_of_month': autocomplete.ListSelect2(url='dsp:ptform-options-autocomplete')
             'day_of_week': autocomplete.ListSelect2(url='dsp:ptform-options-autocomplete'),
-            'week_of_month': autocomplete.ListSelect2(url='dsp:ptform-options-autocomplete')
         }
