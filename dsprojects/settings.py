@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'dsp',
-    'storage',
+    'storages',
     'dal',
     'dal_select2',
 ]
