@@ -7,9 +7,9 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
-""" 
+"""
 
-DEBUG = False
+DEBUG = True
 
 import os
 import dj_database_url
