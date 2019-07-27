@@ -26,6 +26,9 @@ SECRET_KEY = "el%0urhms_2ug2wzxxx+90n^h4e*$5tac2&r5x(iwy1p974*-f"
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    'formtools',
+    'dal',
+    'dal_select2'
     'bootstrap4',
     "taggit",
     'django.contrib.admin',
@@ -36,7 +39,6 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'dsp',
-
 ]
 
 MIDDLEWARE = [
