@@ -59,7 +59,7 @@ def create_project(pname, purl, desc):
 	return {'project':pname, 'reflink':purl, 'description': desc}
 
 def schedule_creator(request):
-	results = create_schedules(request.POST['week_of_month'], request.POST['day_of_week'])
+	results = create_schedules.get_events(request.POST['week_of_month'], request.POST['day_of_week'])
 
 class PTFormInputAutocompleteDays(autocomplete.Select2ListView):
 	def get_list(self):

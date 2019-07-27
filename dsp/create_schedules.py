@@ -40,5 +40,5 @@ def get_events(week_num, day_of_week, date=datetime.date.today(), yearsout=10):
         date += relativedelta(months=1)
     return cal
 
-with open('parking_alerts.ics', 'w') as f:
-    f.writelines(get_events(1, 3))
+#with open('parking_alerts.ics', 'w') as f:
+#    f.writelines(get_events(1, 3))
