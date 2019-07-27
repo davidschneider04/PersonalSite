@@ -1,5 +1,5 @@
 from django.urls import path
-from django.conf.urls import url 
+from django.conf.urls import url
 from . import views
 
 app_name = 'dsp'
@@ -13,9 +13,10 @@ urlpatterns = [
     path('python/', views.pyython, name='pyython'),
     path('etc/', views.etc, name='etc'),
     path('contact/', views.contact, name='contact'),
-    path('davesdatadepot/mapping_mountains/', 
+    path('/resume/', views.resume, name='resume'),
+    path('davesdatadepot/mapping_mountains/',
     	views.mapping_mountains, name='mapping_mountains'),
-    path('davesdatadepot/denver_zipcodes/', 
+    path('davesdatadepot/denver_zipcodes/',
     	views.denver_zipcodes, name='denver_zipcodes'),
     path('davesdatadepot/alteryx_creations/',
         views.alteryx_creations, name='alteryx_creations'),
@@ -27,5 +28,11 @@ urlpatterns = [
         views.findscene, name='findscene'),
     path('davesdatadepot/resume_from_plaintext/',
         views.resume_from_plaintext, name='resume_from_plaintext'),
-    path('/resume/', views.resume, name='resume'),
+    path('davesdatadepot/parking_tickets/',
+        views.parking_tickets, name='parking_tickets'),
+    url(
+        r'^ptform-options-autocomplete/$',
+        views.PTFormInputAutocompleteDays.as_view(),
+        name='ptform-options-autocomplete',
+    ),
 ]

@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 
+from . import create_schedules
+
 def home(request):
 	context={}
 	return render(request, 'dsp/home.html', context)
@@ -54,48 +56,77 @@ def budget_template(request):
 def create_project(pname, purl, desc):
 	return {'project':pname, 'reflink':purl, 'description': desc}
 
-#all projects
+def schedule_creator(request):
+	results = create_schedules(request.POST[''])
+
+class PTFormInputAutocompleteDays(autocomplete.Select2ListView):
+    def get_list(self):
+        options = ParkingTicketForm.objects.all()
+        options_tups = [i.option for i in option]
+        return options_tups
+
+def parking_tickets(request):
+	if request.method == 'POST':
+		# create a form instance and populate it with data from the request:
+        form = ParkingTicketForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required, redirect to a new URL:
+            return schedule_creator(request)
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = ParkingTicketForm()
+    context = {'form': form}
+    return render(request, 'dsp/Projects/parking_tickets.html', context)
+
+# all projects
 def davesdatadepot(request):
 	projects = []
-	#findscene
+	# findscene
 	pname = "FindScene — App to Find Video Links"
-	purl = "http://www.davidschneiderprojects.com/davesdatadepot/findscene/"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/findscene/"
 	desc = "Do you have a favorite line from a favorite TV show or movie, but don't remember what episode or time it's from? Let FindScene find the exact spot and link you to it."
-	project = create_project(pname, purl , desc)
+	project = create_project(pname, purl, desc)
 	projects.append(project)
-	#mapping mountains
+	# parking tickets
+	pname = "Automated Monthly Reminders"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/parking_tickets/"
+	desc = 'Create reminders in "the <N>th <Weekday> of the month" format in a file ready for import on phone or computer. Helpful for Denverites avoiding street sweeping tickets.'
+	project = create_project(pname, purl, desc)
+	projects.append(project)
+	# mapping mountains
 	pname = "Mapping Colorado Mountains"
-	purl = "http://www.davidschneiderprojects.com/davesdatadepot/mapping_mountains/"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/mapping_mountains/"
 	desc = "Using Python with Folium to create an interactive map of the 100 highest peaks in Colorado."
-	project = create_project(pname, purl , desc)
+	project = create_project(pname, purl, desc)
 	projects.append(project)
-	#denver zipcodes
+	# denver zipcodes
 	pname = "Mapping & Modeling Denver Zipcodes"
-	purl = "http://www.davidschneiderprojects.com/davesdatadepot/denver_zipcodes/"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/denver_zipcodes/"
 	desc = "Using Python with Folium to plot restaurants, income, etc., zoned by ZCTA, and sklearn to create a cluster model."
-	project = create_project(pname, purl , desc)
+	project = create_project(pname, purl, desc)
 	projects.append(project)
-	#resume
+	# resume
 	pname = "Stylized Resume From JSON"
-	purl = "http://www.davidschneiderprojects.com/davesdatadepot/resume_from_plaintext/"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/resume_from_plaintext/"
 	desc = "Use Python to create a formatted .docx or PDF file from a plaintext JSON."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
-	#budget spreadsheet
+	# budget spreadsheet
 	pname = "Monthly Budget Template"
-	purl = "http://www.davidschneiderprojects.com/davesdatadepot/budget_template/"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/budget_template/"
 	desc = "Spreadsheet for tracking personal expenses. Goal is maximum customizability, which unfortunately requires some manual input. Most useful feature is trajectory graphing of spending by category and total."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
-	#alteryx
+	# alteryx
 	#pname = "Alteryx For Data Analysis"
 	#purl = "http://www.davidschneiderprojects.com/davesdatadepot/alteryx_creations/"
 	#desc = "Alteryx is a powerful, accessible tool that I am certified in and used at my past role to create a variety of custom tools and solutions."
 	#project = create_project(pname, purl , desc)
 	#projects.append(project)
-	#this site
+	# this site
 	pname = "Code For This Website"
-	purl = "http://www.davidschneiderprojects.com/davesdatadepot/website_code/"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/website_code/"
 	desc = "So meta. The internals of this site are mainly built with Django, Bootstrap, and Sass."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
