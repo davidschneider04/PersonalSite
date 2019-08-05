@@ -64,10 +64,7 @@ def schedule_creator(request):
 	day_lookup = {'Monday':0, 'Tuesday':1, 'Wednesday':2, 'Thursday':3, 'Friday':4, 'Saturday': 5, 'Sunday':6}
 	day_of_week = day_lookup[request.POST['day_of_week']]
 	results = create_schedules.get_events(week_of_month, day_of_week)
-	if results:
-		return render(request, 'herokuapp/result_schedule.html', {"context": results})
-	else:
-		raise RuntimeError
+	return results
 
 class PTFormInputAutocompleteDays(autocomplete.Select2ListView):
 	def get_list(self):
@@ -82,7 +79,10 @@ def parking_tickets(request):
 		# check whether it's valid:
 		if form.is_valid():
 			# process the data in form.cleaned_data as required, redirect to a new URL:
-			return schedule_creator(request)
+			cal = schedule_creator(request)
+			response = HttpResponse(cal, content_type='application/text charset=utf-8')
+			response['Content-Disposition'] = 'attachment; filename="foo.txt"'
+			return response
 	# if a GET (or any other method) we'll create a blank form
 	else:
 		form = ParkingTicketForm()
@@ -96,12 +96,6 @@ def davesdatadepot(request):
 	pname = "FindScene — App to Find Video Links"
 	purl = "https://www.davidschneiderprojects.com/davesdatadepot/findscene/"
 	desc = "Do you have a favorite line from a favorite TV show or movie, but don't remember what episode or time it's from? Let FindScene find the exact spot and link you to it."
-	project = create_project(pname, purl, desc)
-	projects.append(project)
-	# parking tickets
-	pname = "Automated Monthly Reminders"
-	purl = "https://www.davidschneiderprojects.com/davesdatadepot/parking_tickets/"
-	desc = 'Create reminders in "the <N>th <Weekday> of the month" format in a file ready for import on phone or computer. Helpful for Denverites avoiding street sweeping tickets.'
 	project = create_project(pname, purl, desc)
 	projects.append(project)
 	# mapping mountains
@@ -134,6 +128,12 @@ def davesdatadepot(request):
 	#desc = "Alteryx is a powerful, accessible tool that I am certified in and used at my past role to create a variety of custom tools and solutions."
 	#project = create_project(pname, purl , desc)
 	#projects.append(project)
+	# parking tickets
+	pname = "Automated Monthly Reminders"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/parking_tickets/"
+	desc = 'Create reminders in "the #th <Weekday> of the month" format in a file ready for import on phone or computer. Helpful for Denverites avoiding street sweeping tickets.'
+	project = create_project(pname, purl, desc)
+	projects.append(project)
 	# this site
 	pname = "Code For This Website"
 	purl = "https://www.davidschneiderprojects.com/davesdatadepot/website_code/"
