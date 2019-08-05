@@ -81,7 +81,9 @@ def parking_tickets(request):
 		if form.is_valid():
 			# process the data in form.cleaned_data as required, redirect to a new URL:
 			acal = sc.create_cal()
-			acal += sc.make_event(acal, request)
+			wom = form.week_of_month
+			dow = form.day_of_week
+			acal += sc.make_event(acal, wom, dow)
 			acal = sc.finish_cal(acal)
 			cal = schedule_creator(request)
 			response = HttpResponse(cal, content_type='application/text charset=utf-8')
