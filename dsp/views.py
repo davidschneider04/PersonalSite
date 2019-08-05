@@ -5,6 +5,7 @@ from dal import autocomplete
 
 from .forms import ParkingTicketForm
 from . import create_schedules
+from ScheduleCreator import create_cal, finish_cal, make_event
 
 def home(request):
 	context={}
@@ -79,6 +80,10 @@ def parking_tickets(request):
 		# check whether it's valid:
 		if form.is_valid():
 			# process the data in form.cleaned_data as required, redirect to a new URL:
+			sc = ScheduleCreator()
+			acal = sc.create_cal()
+			acal += sc.make_event(acal, request)
+			acal = finish_cal(acal)
 			cal = schedule_creator(request)
 			response = HttpResponse(cal, content_type='application/text charset=utf-8')
 			response['Content-Disposition'] = 'attachment; filename="parking_reminders.ics"'
