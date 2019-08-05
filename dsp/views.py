@@ -5,7 +5,7 @@ from dal import autocomplete
 
 from .forms import ParkingTicketForm
 from . import create_schedules
-from dsprojects.dsp.ScheduleCreator import create_cal, finish_cal, make_event
+from dsp.ScheduleCreator import create_cal, finish_cal, make_event
 
 def home(request):
 	context={}
