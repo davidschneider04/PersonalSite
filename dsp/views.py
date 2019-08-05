@@ -85,8 +85,8 @@ def parking_tickets(request):
 			dow = form.fields['day_of_week']
 			acal += sc.make_event(acal, wom, dow)
 			acal = sc.finish_cal(acal)
-			cal = schedule_creator(request)
-			response = HttpResponse(cal, content_type='application/text charset=utf-8')
+			#cal = schedule_creator(request)
+			response = HttpResponse(acal, content_type='application/text charset=utf-8')
 			response['Content-Disposition'] = 'attachment; filename="parking_reminders.ics"'
 			return response
 	# if a GET (or any other method) we'll create a blank form
