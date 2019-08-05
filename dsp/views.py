@@ -81,7 +81,7 @@ def parking_tickets(request):
 			# process the data in form.cleaned_data as required, redirect to a new URL:
 			cal = schedule_creator(request)
 			response = HttpResponse(cal, content_type='application/text charset=utf-8')
-			response['Content-Disposition'] = 'attachment; filename="foo.txt"'
+			response['Content-Disposition'] = 'attachment; filename="parking_reminders.ics"'
 			return response
 	# if a GET (or any other method) we'll create a blank form
 	else:
