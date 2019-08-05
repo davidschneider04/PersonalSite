@@ -65,9 +65,9 @@ def schedule_creator(request):
 	day_of_week = day_lookup[request.POST['day_of_week']]
 	results = create_schedules.get_events(week_of_month, day_of_week)
 	if results:
-        return render(request, 'herokuapp/result_schedule.html', {"context": results})
-    else:
-    	raise RuntimeError
+		return render(request, 'herokuapp/result_schedule.html', {"context": results})
+	else:
+		raise RuntimeError
 
 class PTFormInputAutocompleteDays(autocomplete.Select2ListView):
 	def get_list(self):
