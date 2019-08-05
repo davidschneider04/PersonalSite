@@ -11,6 +11,8 @@ def finish_cal(cal):
     return cal
 
 def make_event(cal, week_num, day_of_week, date=datetime.date.today()):
+    import calendar
+    import datetime
     #assert isinstance(week_num, int) and week_num>=1 and week_num<=4, "week number out of range"
     #assert isinstance(day_of_week, int) and day_of_week>=0 and day_of_week<=6, "day number ranges in python from 0-6"
     weeknum = str(week_num)[0]
@@ -18,7 +20,7 @@ def make_event(cal, week_num, day_of_week, date=datetime.date.today()):
     #make event
     event = 'BEGIN:VEVENT\nDTSTART;TZID=America/Denver:'
     starttime = datetime.date.today().strftime('%Y%m%d') + 'T120000Z\n'
-    event += starttime 
+    event += starttime
     rrule = 'RRULE:FREQ=MONTHLY;BYDAY='
     #determine day
     days = list(calendar.day_name)
