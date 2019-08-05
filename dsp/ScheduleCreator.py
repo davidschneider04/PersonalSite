@@ -24,6 +24,7 @@ def make_event(cal, week_num, day_of_week, date=datetime.date.today()):
     days = list(calendar.day_name)
     days_abr = [str.upper(abr[:2]) for abr in list(calendar.day_abbr)]
     days_of_week = dict(zip(days, days_abr))
+    days_of_week = {'Monday': 'MO', 'Tuesday': 'TU', 'Wednesday': 'WE', 'Thursday': 'TH', 'Friday': 'FR', 'Saturday': 'SA', 'Sunday': 'SU'}
     form_day_abr = days_of_week[day_of_week]
     day_of_month = week_of_month + form_day_abr
     rrule += day_of_month + '\n'
