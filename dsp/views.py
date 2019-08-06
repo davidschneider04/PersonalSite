@@ -4,7 +4,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from dal import autocomplete
 
 from .forms import ParkingTicketForm
-from . import create_schedules
 import dsp.ScheduleCreator as sc
 
 def home(request):
