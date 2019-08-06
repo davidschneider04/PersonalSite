@@ -1,5 +1,6 @@
 import calendar
 import datetime
+import dateutil
 
 def create_cal():
     cal = ''
@@ -49,6 +50,8 @@ def make_event(week_num, day_of_week, date=datetime.date.today()):
         loop_date += datetime.timedelta(days=1)
         if loop_date.strftime('%A') == day_of_week:
             loop_weeks += 1
+    if loop_date < date:
+        loop_date += dateutil.relativedelta(months=1)
     starttime = 'DTSTART;TZID=America/Denver:'
     starttime += loop_date.strftime('%Y%m%d') + 'T080000Z\n'
     event += starttime
@@ -62,6 +65,9 @@ def make_event(week_num, day_of_week, date=datetime.date.today()):
     rrule_freq = week_of_month + form_day_abr
     event = add_rrule(event, rrule_freq)
     event = except_holidays(event)
+    #exclude all instances before today
+    today_frmt = date.strftime('%Y%m%d')
+    event += f'EXRULE:FREQ=DAILY;INTERVAL=1;UNTIL={today_frmt}\n'
     summary = f'SUMMARY:Parking Alert: {week_num} {day_of_week} of month.\n'
     event += summary
     #alarm at 9PM and 7AM
