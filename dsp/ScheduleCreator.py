@@ -22,12 +22,14 @@ def add_rrule(event, byday):
     return event
 
 def make_event(week_num, day_of_week, date=datetime.date.today()):
-    week_of_month = str(week_num)[0]
+    week_of_month = week_num[0]
     event = 'BEGIN:VEVENT\n'
     loop_date = floor_month(date)
     loop_weeks = 1 if loop_date.strftime('%A') == day_of_week else 0
-    while loop_date.strftime('%A') != day_of_week and loop_weeks != week_num:
+    while loop_weeks != int(week_of_month) or loop_date.strftime('%A') != day_of_week:
         loop_date += datetime.timedelta(days=1)
+        if loop_date.strftime('%A') == day_of_week:
+            loop_weeks += 1
     starttime = 'DTSTART;TZID=America/Denver:'
     starttime += loop_date.strftime('%Y%m%d') + 'T080000Z\n'
     event += starttime
