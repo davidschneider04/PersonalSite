@@ -21,6 +21,25 @@ def add_rrule(event, byday):
     event += rrule
     return event
 
+def except_holidays(event):
+    #source: denvergov.org/content/denvergov/en/office-of-human-resources/employee-resources/holiday-schedule.html
+    #new years - not needed yet
+    #mlk - not needed yet
+    #presidents - not needed yet
+    #cesar chavez (?) - not needed yet
+    #memorial
+    event += 'EXRULE:FREQ=YEARLY;BYDAY=MO;BYSETPOS=-1;BYMONTH=5\n'
+    #independence
+    event += 'EXRULE:FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=4\n'
+    #labor
+    event += 'EXRULE:FREQ=YEARLY;BYDAY=MO;BYSETPOS=1;BYMONTH=9\n'
+    #veterans
+    event += 'EXRULE:FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=11\n'
+    #thanksgiving
+    event += 'EXRULE:FREQ=YEARLY;BYDAY=TH;BYSETPOS=4;BYMONTH=11\n'
+    #xmas - not needed yet
+    return event
+
 def make_event(week_num, day_of_week, date=datetime.date.today()):
     week_of_month = week_num[0]
     event = 'BEGIN:VEVENT\n'
@@ -42,6 +61,7 @@ def make_event(week_num, day_of_week, date=datetime.date.today()):
     form_day_abr = days_of_week[day_of_week]
     rrule_freq = week_of_month + form_day_abr
     event = add_rrule(event, rrule_freq)
+    event = except_holidays(event)
     summary = f'SUMMARY:Parking Alert: {week_num} {day_of_week} of month.\n'
     event += summary
     #alarm at 9PM and 7AM
