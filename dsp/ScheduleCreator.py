@@ -14,23 +14,32 @@ def floor_month(date):
     date -= datetime.timedelta(days=date.day-1)
     return date
 
+def add_rrule(event, byday):
+    rrule = 'RRULE:FREQ=MONTHLY;BYDAY='
+    rrule += byday
+    rrule += '\n'
+    event += rrule
+    return event
+
 def make_event(week_num, day_of_week, date=datetime.date.today()):
     week_of_month = str(week_num)[0]
     event = 'BEGIN:VEVENT\n'
+    loop_date = floor_month(date)
+    loop_weeks = 1 if loop_date.strftime('%A') == day_of_week else 0
+    while loop_date.strftime('%A') != day_of_week and loop_weeks != week_num:
+        loop_date += datetime.timedelta(days=1)
     starttime = 'DTSTART;TZID=America/Denver:'
-    starttime += date.strftime('%Y%m%d') + 'T080000Z\n'
+    starttime += loop_date.strftime('%Y%m%d') + 'T080000Z\n'
     event += starttime
     endtime = 'DTEND;TZID=America/Denver:'
-    endtime += date.strftime('%Y%m%d') + 'T170000Z\n'
+    endtime += loop_date.strftime('%Y%m%d') + 'T170000Z\n'
     event += endtime
-    rrule = 'RRULE:FREQ=MONTHLY;BYDAY='
     days = list(calendar.day_name)
     days_abr = [str.upper(abr[:2]) for abr in list(calendar.day_abbr)]
     days_of_week = dict(zip(days, days_abr))
     form_day_abr = days_of_week[day_of_week]
-    day_of_month = week_of_month + form_day_abr
-    rrule += day_of_month + '\n'
-    event += rrule
+    rrule_freq = week_of_month + form_day_abr
+    event = add_rrule(event, rrule_freq)
     summary = f'SUMMARY:Parking Alert: {week_num} {day_of_week} of month.\n'
     event += summary
     #alarm at 9PM and 7AM
