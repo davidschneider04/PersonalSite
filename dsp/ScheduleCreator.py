@@ -18,6 +18,8 @@ def floor_month(date):
 def add_rrule(event, byday):
     rrule = 'RRULE:FREQ=MONTHLY;BYDAY='
     rrule += byday
+    #street sweeping is only for apr - nov
+    rrule += ';BYMONTH=4,5,6,7,8,9,10,11'
     rrule += '\n'
     event += rrule
     return event
@@ -63,6 +65,7 @@ def make_event(week_num, day_of_week, date=datetime.date.today()):
     rrule_freq = week_of_month + form_day_abr
     event = add_rrule(event, rrule_freq)
     event = except_holidays(event)
+    event += f'EXRULE:FREQ=DAILY;INTERVAL=1;'
     #exclude all instances before today
     today_frmt = date.strftime('%Y%m%d')
     event += f'EXRULE:FREQ=DAILY;INTERVAL=1;UNTIL={today_frmt}T090000Z\n'
