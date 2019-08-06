@@ -59,14 +59,6 @@ def budget_template(request):
 def create_project(pname, purl, desc):
 	return {'project':pname, 'reflink':purl, 'description': desc}
 
-def schedule_creator(request):
-	week_lookup = {'1st':1, '2nd':2, '3rd':3, '4th':4}
-	week_of_month = week_lookup[request.POST['week_of_month']]
-	day_lookup = {'Monday':0, 'Tuesday':1, 'Wednesday':2, 'Thursday':3, 'Friday':4, 'Saturday': 5, 'Sunday':6}
-	day_of_week = day_lookup[request.POST['day_of_week']]
-	results = create_schedules.get_events(week_of_month, day_of_week)
-	return results
-
 class PTFormInputAutocompleteDays(autocomplete.Select2ListView):
 	def get_list(self):
 		options = ParkingTicketForm.objects.all()
