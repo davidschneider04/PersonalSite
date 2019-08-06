@@ -127,7 +127,7 @@ def davesdatadepot(request):
 	# parking tickets
 	pname = "Automated Monthly Reminders"
 	purl = "https://www.davidschneiderprojects.com/davesdatadepot/parking_tickets/"
-	desc = 'Create reminders in "the #th <Weekday> of the month" format in a file ready for import on phone or computer. Helpful for Denverites avoiding street sweeping tickets.'
+	desc = "Helpful for Denverites avoiding street sweeping tickets."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
 	# this site
