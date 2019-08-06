@@ -3,7 +3,7 @@ import datetime
 
 def create_cal():
     cal = ''
-    cal += "BEGIN:VCALENDAR\nVERSION:2.0\n"
+    cal += "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:davidschneiderprojects.com\nNAME:Parking Reminders\nX-WR-CALNAME:Parking Reminders"
     return cal
 
 def finish_cal(cal):
