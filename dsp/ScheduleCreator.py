@@ -13,12 +13,12 @@ def finish_cal(cal):
 def make_event(week_num, day_of_week, date=datetime.date.today()):
     week_of_month = str(week_num)[0]
     event = 'BEGIN:VEVENT\n'
-    #starttime = 'DTSTART;TZID=America/Denver:'
-    #starttime += datetime.date.today().strftime('%Y%m%d') + 'T080000Z\n'
-    #event += starttime
-    #endtime = 'DTEND;TZID=America/Denver:'
-    #endtime += datetime.date.today().strftime('%Y%m%d') + 'T170000Z\n'
-    #event += endtime
+    starttime = 'DTSTART;TZID=America/Denver:'
+    starttime += datetime.date.today().strftime('%Y%m%d') + 'T080000Z\n'
+    event += starttime
+    endtime = 'DTEND;TZID=America/Denver:'
+    endtime += datetime.date.today().strftime('%Y%m%d') + 'T170000Z\n'
+    event += endtime
     rrule = 'RRULE:FREQ=MONTHLY;BYDAY='
     days = list(calendar.day_name)
     days_abr = [str.upper(abr[:2]) for abr in list(calendar.day_abbr)]
