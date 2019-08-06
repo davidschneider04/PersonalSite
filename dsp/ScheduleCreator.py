@@ -28,9 +28,9 @@ def make_event(week_num, day_of_week, date=datetime.date.today()):
     rrule += day_of_month + '\n'
     event += rrule
     summary = f'SUMMARY:Parking Alert: {week_num} {day_of_week} of month.\n'
-    #alarm at 9PM and 7AM
-    alarm = 'BEGIN: VALARM\n' + 'TRIGGER:-PT11H\n' + 'REPEAT:1\n' + 'DURATION:PT10H\n' + 'ACTION:DISPLAY\n' + f'{summary}\n' + 'END:VALARM\n'
-    event += alarm
     event += summary
+    #alarm at 9PM and 7AM
+    alarm = 'BEGIN: VALARM\n' + 'TRIGGER:-PT11H\n' + 'REPEAT:1\n' + 'DURATION:PT10H\n' + 'ACTION:DISPLAY\n' + f'{summary}' + 'END:VALARM\n'
+    event += alarm
     event += 'END:VEVENT\n'
     return event
