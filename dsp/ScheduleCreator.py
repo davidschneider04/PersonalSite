@@ -10,14 +10,18 @@ def finish_cal(cal):
     cal += 'END:VCALENDAR'
     return cal
 
+def floor_month(date):
+    date -= datetime.timedelta(days=date.day-1)
+    return date
+
 def make_event(week_num, day_of_week, date=datetime.date.today()):
     week_of_month = str(week_num)[0]
     event = 'BEGIN:VEVENT\n'
     starttime = 'DTSTART;TZID=America/Denver:'
-    starttime += datetime.date.today().strftime('%Y%m%d') + 'T080000Z\n'
+    starttime += date.strftime('%Y%m%d') + 'T080000Z\n'
     event += starttime
     endtime = 'DTEND;TZID=America/Denver:'
-    endtime += datetime.date.today().strftime('%Y%m%d') + 'T170000Z\n'
+    endtime += date.strftime('%Y%m%d') + 'T170000Z\n'
     event += endtime
     rrule = 'RRULE:FREQ=MONTHLY;BYDAY='
     days = list(calendar.day_name)
