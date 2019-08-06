@@ -80,14 +80,13 @@ def parking_tickets(request):
 		# check whether it's valid:
 		if form.is_valid():
 			# process the data in form.cleaned_data as required, redirect to a new URL:
-			acal = sc.create_cal()
+			cal = sc.create_cal()
 			wom = request.POST['week_of_month']
 			dow = request.POST['day_of_week']
-			acal += sc.make_event(wom, dow)
-			acal = sc.finish_cal(acal)
-			#cal = schedule_creator(request)
-			response = HttpResponse(acal, content_type='application/text charset=utf-8')
-			response['Content-Disposition'] = 'attachment; filename="parking_reminders.ics"'
+			cal += sc.make_event(wom, dow)
+			cal = sc.finish_cal(cal)
+			response = HttpResponse(cal, content_type='application/text charset=utf-8')
+			response['Content-Disposition'] = f'attachment; filename="parking_reminders_{wom}{dow}.ics"'
 			return response
 	# if a GET (or any other method) we'll create a blank form
 	else:
