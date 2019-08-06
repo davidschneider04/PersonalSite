@@ -601,6 +601,10 @@ img.backicon {
     }
     a {
         color: #212529;
+        &:hover {
+            color: $green;
+            text-decoration: none;
+        }
     }
 }
 
