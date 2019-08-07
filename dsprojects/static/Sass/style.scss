@@ -690,6 +690,9 @@ img.backicon {
             margin-left: 0;
         }
     }
+    @media screen and (min-aspect-ratio: 5/2) {
+        display: none;
+    }
 }
 
 .formfield {
@@ -703,6 +706,9 @@ div#disqus_thread {
     grid-column: 2 / span 1;
     grid-row: 4;
     margin: 0 5vw 2.5vh 5vw;
+    @media screen and (min-aspect-ratio: 5/2) {
+        grid-template: 25vh 25vh 10vh 10vh 10vh/1fr;
+    }
 }
 
 li#thread-share-bar {
