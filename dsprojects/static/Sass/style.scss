@@ -644,6 +644,9 @@ img.backicon {
     margin-right: 5vw;
     label {
         font-weight: 800;
+        @include media-breakpoint-up(lg) {
+            font-size: 50px;
+        }
     }
     select {
         color: $forestgreen;
@@ -662,11 +665,6 @@ img.backicon {
         margin-top: 2vh;
         margin-left: 5vw;
         margin-right: 5vw;
-        label {
-            color: $forestgreen;
-            font-size: 50px;
-            font-weight: 800;
-        }
     }
 }
 
