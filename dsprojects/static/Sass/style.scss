@@ -600,9 +600,9 @@ img.backicon {
         font-size: 20px;
     }
     a {
-        color: #212529;
+        color: $green;
         &:hover {
-            color: $green;
+            color: $forestgreen;
             text-decoration: none;
         }
     }
@@ -640,10 +640,12 @@ img.backicon {
     width: 90vw;
     grid-template: 15vh 15vh 10vh 10vh 10vh/1fr;
     margin-top: 2.5vh;
-    margin-left: 5vw;
     margin-right: 5vw;
     label {
         font-weight: 800;
+    }
+    label, input {
+        margin-left: 5vw;
     }
     select {
         color: $forestgreen;
@@ -676,6 +678,9 @@ img.backicon {
         margin-right: 5vw;
         label, select {
             font-size: 50px;
+        }
+        label, input {
+            margin-left: 0;
         }
     }
 }
