@@ -641,6 +641,7 @@ img.backicon {
     grid-template: 15vh 15vh 10vh 10vh 10vh/1fr;
     margin-top: 2.5vh;
     margin-right: 5vw;
+    margin-bottom: 10vh;
     label {
         font-weight: 800;
     }
@@ -648,6 +649,7 @@ img.backicon {
         margin-left: 5vw;
     }
     select {
+        border-color: $forestgreen;
         color: $forestgreen;
         cursor: pointer;
         font-weight: 700;
@@ -672,11 +674,11 @@ img.backicon {
         display: grid;
         height: 50vh;
         width: 70vw;
-        grid-template: 10vh 10vh 10vh 10vh 10vh/1fr;
+        grid-template: 15vh 15vh 10vh 10vh 10vh/1fr;
         margin-top: 2vh;
         margin-left: 5vw;
         margin-right: 5vw;
-        label, select {
+        label, select, input {
             font-size: 50px;
         }
         label, input {
