@@ -655,12 +655,13 @@ img.backicon {
         width: 30vw;
     }
     input {
-        background-color: $green;
+        background-color: $forestgreen;
         border-radius: 25px;
         color: $lightgray;
         font-weight: 700;
+        padding: 20px;
         &:hover {
-            background: $forestgreen;
+            background: $green;
             cursor: pointer;
         }
 
