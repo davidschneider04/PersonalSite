@@ -599,6 +599,9 @@ img.backicon {
     @include media-breakpoint-up(lg) {
         font-size: 20px;
     }
+    @media screen and (min-aspect-ratio: 2.5/1) {
+        display: none;
+    }
     a {
         color: $green;
         &:hover {
@@ -650,10 +653,10 @@ img.backicon {
     }
     select {
         border-color: $forestgreen;
+        border-radius: 5px;
         color: $forestgreen;
         cursor: pointer;
         font-weight: 700;
-        height: 10vh;
         -webkit-appearance: none;
         text-indent: 2.5vw;
         width: 30vw;
@@ -668,7 +671,9 @@ img.backicon {
             background: $green;
             cursor: pointer;
         }
-
+        @include media-breakpoint-up(lg) {
+            margin-top: 10vh;
+        }
     }
     @include media-breakpoint-up(lg) {
         display: grid;
