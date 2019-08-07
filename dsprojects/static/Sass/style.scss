@@ -638,8 +638,8 @@ img.backicon {
     font-size: 6vw;
     height: 50vh;
     width: 90vw;
-    grid-template: 10vh 10vh 10vh 10vh 10vh/1fr;
-    margin-top: 7.5vh;
+    grid-template: 15vh 15vh 10vh 10vh 10vh/1fr;
+    margin-top: 2.5vh;
     margin-left: 5vw;
     margin-right: 5vw;
     label {
@@ -652,7 +652,18 @@ img.backicon {
         height: 10vh;
         -webkit-appearance: none;
         text-indent: 2.5vw;
-        width: 20vw;
+        width: 30vw;
+    }
+    input {
+        background-color: $green;
+        border-radius: 25px;
+        color: $lightgray;
+        font-weight: 700;
+        &:hover {
+            background: $forestgreen;
+            cursor: pointer;
+        }
+
     }
     @include media-breakpoint-up(lg) {
         display: grid;
