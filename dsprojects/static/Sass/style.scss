@@ -637,9 +637,21 @@ img.backicon {
     height: 50vh;
     width: 90vw;
     grid-template: 10vh 10vh 10vh 10vh 10vh/1fr;
-    margin-top: 2vh;
+    margin-top: 7.5vh;
     margin-left: 5vw;
     margin-right: 5vw;
+    label {
+        color: $forestgreen;
+        font-size: 6vw;
+        font-weight: 800;
+    }
+    select {
+        color: $forestgreen;
+        font-weight: 700;
+        height: 10vh;
+        text-indent: 2.5vw;
+        width: 20vw;
+    }
     @include media-breakpoint-up(lg) {
         display: grid;
         height: 50vh;

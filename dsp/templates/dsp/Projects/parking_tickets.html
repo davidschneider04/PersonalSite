@@ -33,17 +33,17 @@
     		<h1 style="font-size:5vw">Create Reminders to Avoid Tickets.</h1>
     	</div>
       <div class="resumedescription" style="grid-column:2 / span 4; margin:2.5vh 5vw;">
-        Denver gives you a ticket if you don't move your car according to their schedule. I was happy to find that the city offers to send text message reminders. This worked great for a few weeks, until it did not, and I found myself with another ticket, and an explanation that the city assumes no responsibility for failure of the service it provides. So, I made my own solution. It's just a set of calendar events, but I couldn't find this level of customizability within any calendar apps. Hypocritically, it too will assume no liability for its failure, because I don't have the money for that. Source code <a href="http://www.davidschneiderprojects.com/davesdatadepot">here</a>.
+        Denver gives you a ticket if you don't move your car according to their schedule. I was happy to find that the city offers to send text message reminders. This worked great for a few weeks, until it did not, and I found myself with another ticket, and an explanation that the city assumes no responsibility for failure of the service it provides. So, I made my own solution. It's just a set of calendar events, but I couldn't find this level of customizability within any calendar apps. Hypocritically, it too will assume no liability for its failure, because I don't have the money for that. <a href="https://raw.githubusercontent.com/davidschneider04/PersonalSite/master/dsp/ScheduleCreator.py">Link to source code.</a>.
       </div>
       <form class="mediaform" action="{% url 'dsp:parking_tickets' %}" method="post">
         {% csrf_token %}
         <div class="container formgrid">
           {% for field in form  %}
           <div class="d-flex flex-row">
-            <div class="col-sm-4">
+            <div class="col-sm-8">
               {{ field.label_tag }}
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
               {{ field }}
             </div>
           </div>
