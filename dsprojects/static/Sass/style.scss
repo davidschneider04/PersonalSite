@@ -373,7 +373,7 @@ img.backicon {
     margin: 2.5vh 0 0 0;
     width: 90vw;
     @include media-breakpoint-up(lg) {
-        width: 90vw-$sidebarwidth;
+        width: 90vw - $sidebarwidth;
     }
 }
 
