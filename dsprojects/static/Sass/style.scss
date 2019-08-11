@@ -368,6 +368,15 @@ img.backicon {
     }
 }
 
+.map_iframe {
+    height: 60vh;
+    margin: 2.5vh 0 0 0;
+    width: 90vw;
+    @include media-breakpoint-up(lg) {
+        width: 90vw-$sidebarwidth;
+    }
+}
+
 .resume_iframe {
     display: none;
     grid-column: 2 / span 3;
