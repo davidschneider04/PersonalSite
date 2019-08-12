@@ -100,16 +100,22 @@ def davesdatadepot(request):
 	desc = "Using Python with Folium to create an interactive map of the 100 highest peaks in Colorado."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
-	# denver zipcodes
-	pname = "Mapping & Modeling Denver Zipcodes"
-	purl = "https://www.davidschneiderprojects.com/davesdatadepot/denver_zipcodes/"
-	desc = "Using Python with Folium to plot restaurants, income, etc., zoned by ZCTA, and sklearn to create a cluster model."
+	# parking tickets
+	pname = "Automated Monthly Reminders"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/parking_tickets/"
+	desc = "Helpful for Denverites avoiding street sweeping tickets."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
 	# resume
 	pname = "Stylized Resume From JSON"
 	purl = "https://www.davidschneiderprojects.com/davesdatadepot/resume_from_plaintext/"
 	desc = "Use Python to create a formatted .docx or PDF file from a plaintext JSON."
+	project = create_project(pname, purl, desc)
+	projects.append(project)
+	# denver zipcodes
+	pname = "Mapping & Modeling Denver Zipcodes"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/denver_zipcodes/"
+	desc = "Using Python with Folium to plot restaurants, income, etc., zoned by ZCTA, and sklearn to create a cluster model."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
 	# budget spreadsheet
@@ -124,12 +130,6 @@ def davesdatadepot(request):
 	#desc = "Alteryx is a powerful, accessible tool that I am certified in and used at my past role to create a variety of custom tools and solutions."
 	#project = create_project(pname, purl , desc)
 	#projects.append(project)
-	# parking tickets
-	pname = "Automated Monthly Reminders"
-	purl = "https://www.davidschneiderprojects.com/davesdatadepot/parking_tickets/"
-	desc = "Helpful for Denverites avoiding street sweeping tickets."
-	project = create_project(pname, purl, desc)
-	projects.append(project)
 	# this site
 	pname = "Code For This Website"
 	purl = "https://www.davidschneiderprojects.com/davesdatadepot/website_code/"
