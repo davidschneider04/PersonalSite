@@ -88,7 +88,7 @@ def nfl_play_breakdown(request):
 
 
 	# read initial data
-	df = pd.read_csv('/Users/kutch/nfl/2018_data.csv'
+	df = pd.read_csv('https://davidschneiderprojects.s3.amazonaws.com/NFL/2018_data.csv'
 	                 ,index_col=False
 	                 ,low_memory=False)
 	df.drop('Unnamed: 0', axis=1, inplace=True)
