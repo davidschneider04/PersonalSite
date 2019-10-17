@@ -18,4 +18,8 @@ django-autocomplete-light = "*"
 django-formtools = "*"
 django-storages = "*"
 dash = "*"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+plotly = "*"
 [dev-packages]
