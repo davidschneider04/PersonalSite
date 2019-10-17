@@ -17,5 +17,5 @@ django-taggit = "*"
 django-autocomplete-light = "*"
 django-formtools = "*"
 django-storages = "*"
-
+dash="1.4.0"
 [dev-packages]
