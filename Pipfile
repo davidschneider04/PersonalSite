@@ -22,4 +22,9 @@ matplotlib = "*"
 numpy = "*"
 pandas = "*"
 plotly = "*"
+skimage = "*"
+
+
+
+
 [dev-packages]
