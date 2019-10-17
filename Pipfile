@@ -22,7 +22,7 @@ matplotlib = "*"
 numpy = "*"
 pandas = "*"
 plotly = "*"
-skimage = "*"
+scikit-image = "*"
 
 
 
