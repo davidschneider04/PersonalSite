@@ -35,4 +35,6 @@ urlpatterns = [
         views.PTFormInputAutocompleteDays.as_view(),
         name='ptform-options-autocomplete',
     ),
+    path('davesdatadepot/nfl/',
+        views.nfl_play_breakdown, name='nfl_play_breakdown'),
 ]
