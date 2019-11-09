@@ -101,7 +101,7 @@ def davesdatadepot(request):
 	projects.append(project)
 	# nfl stats dashboard
 	pname = "NFL Stats Dashboard"
-	purl = "https://nfl-dash.herokuapp.com"
+	purl = "https://www.davidschneiderprojects.com/davesdatadepot/nfl_stats/"
 	desc = "Using Python with Dash to graph penalty stats for the 2018 season."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
