@@ -15,7 +15,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('/resume/', views.resume, name='resume'),
     path('davesdatadepot/nfl_stats/',
-        views.nfl_stats, name='nfl_stats')
+        views.nfl_stats, name='nfl_stats'),
     path('davesdatadepot/mapping_mountains/',
     	views.mapping_mountains, name='mapping_mountains'),
     path('davesdatadepot/denver_zipcodes/',
@@ -37,8 +37,6 @@ urlpatterns = [
         views.PTFormInputAutocompleteDays.as_view(),
         name='ptform-options-autocomplete',
     ),
-
-    
     path('davesdatadepot/nfl/',
         views.nfl_play_breakdown, name='nfl_play_breakdown'),
 ]
