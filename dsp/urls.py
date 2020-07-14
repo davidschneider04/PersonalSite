@@ -32,6 +32,8 @@ urlpatterns = [
         views.resume_from_plaintext, name='resume_from_plaintext'),
     path('davesdatadepot/parking_tickets/',
         views.parking_tickets, name='parking_tickets'),
+    path('davesdatadepot/sw/',
+        views.sw_signin, name='sw_signin')
     url(
         r'^ptform-options-autocomplete/$',
         views.PTFormInputAutocompleteDays.as_view(),

@@ -59,6 +59,10 @@ def budget_template(request):
 	context={}
 	return render(request, 'dsp/Projects/budget_template.html', context)
 
+def sw_signin(request):
+	context={}
+	return render(request, 'dsp/Projects/sw_signin.html', context)
+
 
 def create_project(pname, purl, desc):
 	return {'project':pname, 'reflink':purl, 'description': desc}
@@ -123,6 +127,12 @@ def davesdatadepot(request):
 	desc = "Using Python to create a formatted .docx or PDF file from a plaintext JSON."
 	project = create_project(pname, purl, desc)
 	projects.append(project)
+	# sw
+	#pname = "Automator for Flight Check-ins"
+	#purl = "https://www.davidschneiderprojects.com/davesdatadepot/sw/"
+	#desc = "Using Python and cron to create a GUI that allows user to schedule web automation."
+	#project = create_project(pname, purl, desc)
+	#projects.append(project)
 	# denver zipcodes
 	pname = "Mapping & Modeling Denver Zipcodes"
 	purl = "https://www.davidschneiderprojects.com/davesdatadepot/denver_zipcodes/"
