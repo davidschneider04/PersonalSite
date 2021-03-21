@@ -1,10 +1,16 @@
+from django.contrib.auth.forms import AuthenticationForm
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-from django.http import HttpResponse, HttpResponseRedirect
 from dal import autocomplete
 
 from .forms import ParkingTicketForm
 import dsp.ScheduleCreator as sc
+
+
+class AuthenticationFormWithInactiveUsersOkay(AuthenticationForm):
+    def confirm_login_allowed(self, user):
+        pass
 
 def home(request):
 	context={}
@@ -153,4 +159,8 @@ def davesdatadepot(request):
 	projects.append(project)
 	return render(request, 'dsp/davesdatadepot.html', {"context": projects})
 
+# hidden
+def plants(request):
+	context = {}
+	return render(request, 'dsp/plants.html', context)
 

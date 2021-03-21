@@ -39,5 +39,7 @@ urlpatterns = [
         views.PTFormInputAutocompleteDays.as_view(),
         name='ptform-options-autocomplete'
     )
+    # hidden
+    ,path('plants/', views.plants, name='plants')
 
 ]
