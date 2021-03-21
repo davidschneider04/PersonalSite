@@ -6,7 +6,7 @@ app_name = 'dsp'
 
 urlpatterns = [
     path('', views.home, name='homeblank')
-    ,path('accounts/', include('django.contrib.auth.urls')),
+    ,path('accounts/', include('django.contrib.auth.urls'))
     ,path('/', views.home, name='homeslash')
     ,path('home/', views.home, name='home')
     ,path('resume/', views.resume, name='resume')
