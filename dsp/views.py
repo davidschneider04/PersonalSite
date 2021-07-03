@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -159,7 +160,7 @@ def davesdatadepot(request):
 	projects.append(project)
 	return render(request, 'dsp/davesdatadepot.html', {"context": projects})
 
-# hidden
+@login_required
 def plants(request):
 	context = {}
 	return render(request, 'dsp/plants.html', context)
