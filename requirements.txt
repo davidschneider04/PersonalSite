@@ -47,7 +47,7 @@ fuzzywuzzy==0.17.0
 gunicorn==19.9.0
 idna==2.7
 ipykernel==5.0.0
-ipython==7.0.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
 jedi==0.13.1
