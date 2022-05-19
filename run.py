@@ -1,4 +1,6 @@
+from waitress import serve
+
 from app import app
 
 
-app.run(host='0.0.0.0', port=8080, debug=True)
+serve(app, listen='*:8080') #host='0.0.0.0', port=8080)
