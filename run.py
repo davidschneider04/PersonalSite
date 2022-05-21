@@ -3,4 +3,7 @@ from waitress import serve
 from app import app
 
 
-serve(app, listen='*:8080') #host='0.0.0.0', port=8080)
+try:
+    serve(app, host='0.0.0.0', port=80, url_scheme='https')
+except PermissionError as e:
+    print('You must have super powers')
