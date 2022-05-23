@@ -9,6 +9,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
+@app.route("/")
+def index():
+    poop = "A BEAUTIFUL FLOWER"
+    return render_template('index.html', **locals())
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template('404.html'), 404
