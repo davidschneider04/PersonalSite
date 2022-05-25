@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% extends './base.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body>
+    {% block backicon %}
+    {% endblock %}
+    {% block homeicon %}
+    {% endblock %}
+    {% block content %}
+    <div class="biocontainer">
+    	<div class="header">
+    		<h1>Hi there, I'm Dave.</h1>
+    	</div>
+      <h2 class="bioheader">About me:</h2>
+        <ul class="biolist">
+          <li>7+ years as a data analyst</li>
+          <li>Work mainly in Python and SQL</li>
+          <li>Living in Denver</li>
+        </ul>
+    </div>
+    </div>
+    {% endblock %}
+  </body>
+
+</html>
+

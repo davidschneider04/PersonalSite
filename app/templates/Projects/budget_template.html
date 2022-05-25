@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+{% extends '../davesdatadepot.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body>
+
+    {% block content %}
+    {% block backicon %}
+    <div>
+      <a href="http://www.davidschneiderprojects.com/davesdatadepot">
+        <img class="backicon" src="{% static 'img/backicon3.svg' %}" alt=BackIcon>
+      </a>
+    </div>
+    {% endblock %}
+    <div class="container">
+    	<div class="header">
+    		<h1>A Budget Template.</h1>
+    	</div>
+      <div></div>
+      <div class="websitecodegrid">
+        <div>
+          <div class="resumedescription">
+            I made this because I was frustrated with traditional finance tracking apps like Mint and wanted something that let me work at a super granular, customizable level and also let me track at a glance how I was doing across whatever categories I'd created. The basic idea is that once you have it set up, you just enter each individual expense in the "Transactions" page. These are automatically grouped and graphed in the "Trajectory" tab, where you can see the pacing of your current total expenses for the month against the other categories. This pacing is customizable by category-- for example, the pacing budget for my "Bars/Alcohol" category is proportionally increased for Friday and Saturday each week, since that is typically when I find myself making those purchases.
+          </div>
+          <div class="websitecodeheader">
+            <a href="https://docs.google.com/spreadsheets/d/16oTM-a2e2or4lKChwrkeDcNSOW1EJltlhvXs7k2w5tc/edit#gid=1594284644" target="_blank">Template with example data</a>
+          </div>
+          <div class="websitecodeheader">
+            <a href="https://docs.google.com/spreadsheets/d/1em1YOG4pupLRoU8AuQhBWdRq9zvVivt1JJ0DD57qptw/edit#gid=1594284644" target="_blank">Blank template</a>
+          </div>
+        </div>
+      </div>
+      <div id="disqus_thread">
+      </div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        var disqus_config = function () {
+          this.page.url = "http://davidschneiderprojects.com/davesdatadepot/budget_template/";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "budget_template"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://davidschneiderprojects-com.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+    </div>
+    {% endblock %}
+  </body>
+
+</html>

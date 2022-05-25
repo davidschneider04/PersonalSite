@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+{% extends './base.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body>
+    {% block bottombar %}
+      <nav class="bottombar" id="bottomBar">
+            <div class="container-fluid">
+              <div class="collapsebuttonrow_bottombar">
+                <button type="button" class="btn collapsebuttonrow_bottombar_btn collapsed" data-toggle="collapse" data-target=".row, .threecolcontainer, .bottombarcol, .chevrondown, .chevronup" aria-expanded="false">
+                  <img class="chevrondown collapse" src="{% static 'img/chevron.svg' %}">
+                  <img class="chevronup collapse show" src="{% static 'img/chevron_up.svg' %}">
+                </button>
+              </div>
+              <div class="row bottombarrow collapse">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/davesdatadepot/">Portfolio</a>
+                </button>
+              </div>
+              <div class="row bottombarrow collapse">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/resume/">Resume</a>
+                </button>
+              </div>
+              <div class="row bottombarrow collapse">
+                <button type="button" class="btn btn_bottombar">
+                  <a href="/contact/">Contact / Hire</a>
+                </button>
+              </div>
+              <div class="threecolcontainer collapse">
+                <div class="bottombarcol collapse">
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://github.com/davidschneider04" target="_blank">GitHub</a>
+                  </button>
+                </div>
+                <div class="bottombarcol collapse">
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://www.linkedin.com/in/dts55/" target="_blank">LinkedIn</a>
+                  </button>
+                </div>
+                <div class="bottombarcol collapse">
+                  <button type="button" class="btn btn_bottombar">
+                    <a href="https://www.kaggle.com/davidschneider04/" target="_blank">Kaggle</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+    {% endblock %}
+
+    {% block content %}
+      <div class="projects_container">
+      	<div class="header">
+      		<h1>Data, insights, tinkering.</h1>
+      	</div>
+        {% for project in context %}
+          <div class="project_entry">
+            <h2>
+              <a href={{project.reflink}}>{{project.project}}</a>
+            </h2>
+              <p>{{project.description}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endblock %}
+
+  </body>
+
+</html>
