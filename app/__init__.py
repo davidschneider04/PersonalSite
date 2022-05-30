@@ -16,12 +16,12 @@ db = SQLAlchemy(app)
 def home():
     return render_template('home.html')
 
-
+"""
 @app.route('/davesdatadepot/<project>')
 def singleproj(project):
     return render_template([f'{project}.html', '404.html'])
 
-
+"""
 @app.route('/davesdatadepot')
 def projects():
     def create_project(pname, purl, desc):
@@ -45,11 +45,16 @@ def projects():
     return render_template('davesdatadepot.html', context=projects)
 
 
-@app.route('/<pagenm>', strict_slashes=False)
-def pages(pagenm):
+@app.route('/<pagenm>')
+def pages(pagenm):#, subpg):
     if not pagenm:
         pagenm = 'home'
-    return render_template([f'{pagenm}.html', '404.html'])
+    #if not subpg:
+    #    path = pagenm+'.html'
+    #else:
+    #    path = pagenm+'/'+subpg+'.html'
+    path = pagenm+'.html'
+    return render_template([path, '404.html'])
 
 
 # blueprints
