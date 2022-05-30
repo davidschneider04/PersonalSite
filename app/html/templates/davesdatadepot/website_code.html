@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+{% extends 'davesdatadepot.html' %}
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body>
+
+    {% block content %}
+    {% block backicon %}
+        <div>
+          <a href="http://www.davidschneiderprojects.com/davesdatadepot">
+            <img class="backicon" src='img/backicon.svg' alt=BackIcon>
+          </a>
+        </div>
+    {% endblock %}
+
+    <div class="container">
+
+    	<div class="header">
+    		<h1>Website guts.</h1>
+    	</div>
+
+      <div></div>
+      <div class="acknowledgmentgrid">
+        <div class="acknowledgmentheader">
+          <a href="https://github.com/davidschneider04/PersonalSite" target="_blank">Code on GitHub</a>
+        </div>
+
+        <div class="acknowledgement">
+          <a href="https://www.djangoproject.com/" target="_blank">
+            <img class="acknowledgementlogo" src='img/django_logo.svg' border="0" alt=Django >
+          </a>
+        </div>
+        <div class="acknowledgement">
+          <a href="https://sass-lang.com/" target="_blank">
+            <img class="acknowledgementlogo" src='img/sass_logo.png' border="0" alt=Sass >
+          </a>
+        </div>
+        <div class="acknowledgement">
+          <a href="https://getbootstrap.com/" target="_blank">
+            <img class="acknowledgementlogo" src='img/bootstrap_logo.png' border="0" alt=Bootstrap >
+          </a>
+        </div>
+        <div class="acknowledgement">
+          <a href="https://www.heroku.com/" target="_blank">
+            <img class="acknowledgementlogo" src='img/herokulogo.svg' border="0" alt=Heroku >
+          </a>
+        </div>
+      </div>
+      <div id="disqus_thread">
+      </div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        var disqus_config = function () {
+          this.page.url = "http://davidschneiderprojects.com/davesdatadepot/website_code/";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "website_code"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://davidschneiderprojects-com.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+    </div>
+    {% endblock %}
+  </body>
+
+</html>

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
-{% extends '../davesdatadepot.html' %}
-{% load bootstrap4 %}
-{% load staticfiles %}
+{% extends 'base.html' %}
 
 <html lang="en">
 
@@ -23,7 +21,7 @@
     {% block backicon %}
     <div>
       <a href="http://www.davidschneiderprojects.com/davesdatadepot">
-        <img class="backicon" src="{% static 'img/backicon3.svg' %}" alt=BackIcon>
+        <img class="backicon" src='img/backicon3.svg' alt=BackIcon>
       </a>
     </div>
     {% endblock %}

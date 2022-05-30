@@ -1,10 +1,17 @@
-<html lang="en">
-    <head>
-        <title>Granite Turtle</title>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
-    </head>
-    <p>
-        alas, there is nothing here
-    </p>
+{% extends 'base.html' %}
+
+<html>
+  <body>
+    {% block homeicon %}
+    {% endblock %}
+
+    {% block content %}
+
+      <p>
+        Alas, there is nothing here. Perhaps you are mistaken... or perhaps you are trying to be naughty ;)
+      </p>
+
+    {% endblock %}
+
+  </body>
 </html>
