@@ -9,4 +9,3 @@ Nginx
 Certbot
 DNSExit
 Raspbian
-Google Domains
