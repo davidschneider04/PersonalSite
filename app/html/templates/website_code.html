@@ -22,20 +22,31 @@
         </div>
     {% endblock %}
 
-    <div class="container">
-
+    <div class="container-fluid">
     	<div class="header">
     		<h1>Website guts.</h1>
     	</div>
-
-      <div></div>
-      <div class="websitecodegrid">
-	      <div>
-		      <div class="contactemail">
-		      	<a href="https://github.com/davidschneider04/PersonalSite">1s and 0s</a>
-					</div>
-	      </div>
-      </div>
+        <div class="contactemail" style="margin:5vw">
+	  <a href="https://github.com/davidschneider04/PersonalSite">1s and 0s</a>
+	</div>
+	<div style="margin:5vw">
+		<p>In a far away bedroom, the gears of this website are spun by a <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Raspberry Pi</a> and an <a href="https://www.monoprice.com/product?p_id=9797">ethernet cable</a>. It mightily runs the following processes as long as I have power and internet:</p>
+	    <br>
+	    <p><a href="https://www.nginx.com"><b>nginx</b></a>: This is our "web server". It is the front line for handling incoming traffic whenever someone requests <a href="davidschneiderprojects.com">davidschneiderprojects.com</a> or <a href="www.davidschneiderprojects.com">www.davidschneiderprojects.com</a>. It will also redirect any alternate domains like <a href="dsproj.com">dsproj.com</a> or <a href="davidtschneider">davidtschneider.com</a> so that we can just focus on the final endpoint of <a href="https://davidschneiderprojects.com">https://davidschneiderprojects.com</a>. Since we want all our connections encrypted, any time somebody requests a "http://" URL, we use nginx to forward the request through to a secure port handling https traffic instead. Similar to how we can decide to intercept a request based on its URL, we can also use nginx to detect if a client is requesting static files and serve them outside our actual app. Since nginx is <i>much</i> faster than Python, we save time by fulfilling the simple request upfront. Finally, nginx is also used here as a "reverse proxy" for our actual app hosted on the local computer. You likely may be familiar with using a "forward" ie. <a href="https://knowyourmeme.com/memes/good-luck-im-behind-7-proxies" target="_blank">regular proxy</a> like a VPN, where you send your original traffic through a third party to obscure your original request. In this case, we are obscuring the Raspberry Pi, since we don't want it directly interacting will all the potential nasties out there. Unfortunately, they're still going to try-- the web server helps with that too. Nginx is specifically well equipped to handle DDOS attempts and other cyber bullying because it doesn't need to create a new thread for each client request.</p>
+	    <p><a href="https://docs.pylonsproject.org/projects/waitress/en/latest/"><b>Waitress</b></a>: This is our "middleware". It is a WSGI (web server gateway interface). This is a fancy way of saying it sits in the middle as a way of translating our web server (nginx), which speaks internet, into the Python object that our actual application uses. There are various implentations of the <a href="https://peps.python.org/pep-3333/">WSGI standard</a> you can use to serve your application. For my purposes I chose Waitress because:
+	    <ul style="margin:5vw">
+	      <li>Simple to use/configure. I wish I was popular enough to need more.</li>
+	      <li>Written entirely in Python. So I can pretend like I would be able to debug or fork it.</li>
+	    </ul>
+By running our WSGI, we expose to the web server that we are running an application able to accept requests on whichever port we choose to bind Waitress to. If we have nginx configured as a reverse proxy and provide the appropriate parameters in our <a href="https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/">nginx.conf</a> file, we complete the chain and valid requests can be processed by Flask.</p>
+	    <p><a href="https://flask.palletsprojects.com/"><b>Flask</b></a>: This is our actual (Python) "application". The full scope of using let alone mastering is beyond this site. For hosting this website I basically just use it as a way to dynamically collate and render any templates and routing schemes requires by the app. We can match the template to the request passed by Waitress, do whatever <a href="https://www.youtube.com/watch?v=3ZKq2ptu7qw" target="_blank">fancy footwork</a> we'd like Python to do, then pass back a new version of our page with whatever (valid) content our internet friend has asked for.</p>
+	    <p><a href="https://dnsexit.com/"><b>DNSExit</a> listener</b>: The World Wide Web ("Club Dub") is actually a pretty crowded place. Each device on my network would love to get a spot, but its maxed out of names (IPv4 addresses) it can handle at this point.The internet wizards created a new standard a while back that essentially allows for a lot more addresses by adding more detail (IPv6), but that hasn't really caught on. So, only my router gets an actual address in the context of the outside world. It handles the traffic for my devices and then passes it back to them. Furthermore, since I am cheap to pay for my own static IPv4, Comcast (my ISP) may periodically kick me off the external IP my router. This is why we use DNSExit. It runs constantly in the background, polling the internet to see how the external IP is being assigned to the router. If it changes, the name servers that resolve my external IP to the domains running on our web server are notified so a stranger can still find their way here. This synchronization is known as DDNS (Dynamic Domain Name System).</p>
+	    <p><a href="https://jinja.palletsprojects.com"><b>Jinja2</b></a>: <a href="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" target="_blank">Bobby Tables</a> has his grubby little fingers all over this <a href="https://knowyourmeme.com/memes/series-of-tubes" target="_blank">series of tubes</a> and we need a way to stomp on them. Luckily the good people at Jinja have handled all the gotchas we would likely forget so we can just plug and play with our HTML/CSS/<a href="https://sass-lang.com/">Sass</a>. I don't profess to be a security expert, so I'll let <a href="https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/">smarter people explain it</a> but basically if you don't use this you are probably at risk for (amongst other things) a <a href="https://owasp.org/www-community/attacks/SQL_Injection">SQL injection attack</a> where people get to run code directly against your app and do mean things to it. It also lets us bake inheritance into our templates, which is a real winner for everybody's sanity. This is not really its own "process" in the sense that it is built into the Flask app, but it's good to call out as a vital dependency.</p>
+	     <br>
+	     <br>
+	     <p>With these tools set up, we can run a website for $1/mo (renting the domain), ignoring the (negligible) cost of electricity to power the Raspberry Pi and assuming you am already paying for internet. Plus, we have total control and transparency as to its operation. Congratulations, you have now rolled your own solution! As per usual, nobody else cares, but I'm proud of you.</p>
+	  </div>
+   
       <div id="disqus_thread">
       </div>
       <script>
